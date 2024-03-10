@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wright's Ferry Mansion</title>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- Favicon -->
@@ -11,7 +15,72 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 </head>
 <body>
-  
+  <div id="wrap">
+    <div id="skip-nav"></div>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__title">
+          <a href="/" class="header__title-link">Wright's Ferry Mansion</a>
+        </h1>
+        <a href="/" class="header__logo" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g style="mix-blend-mode:difference">
+            <path d="M25.5403 24.0682H21.0833V16.7002H25.5403V24.0682ZM30.3238 30.3565H34.7808V37.7244H30.3238V30.3565ZM30.3238 16.7002H34.7808V24.0682H30.3238V16.7002ZM36.9903 30.3565H41.4473V37.7244H36.9903V30.3565ZM36.9903 16.7002H41.4473V24.0682H36.9903V16.7002ZM16.2834 24.0682H11.8264V16.7002H16.2834V24.0682ZM16.2834 37.7244H11.8264V30.3565H16.2834V37.7244ZM9.67139 24.0682H5.21439V16.7002H9.67139V24.0682ZM9.67139 37.7244H5.21439V30.3565H9.67139V37.7244ZM0.828125 17.5086V45.6838C0.828125 45.6838 18.7759 45.7109 19.7337 45.7109V30.3456C19.7337 28.0777 21.5241 26.7159 23.641 26.7159C25.758 26.7159 27.5484 28.1157 27.5484 30.3456V45.6838H45.8281V16.8575L22.8955 0.710938L0.828125 17.5086Z" fill="white"></path>
+            </g>
+            </svg>
+        </a>
+        <nav class="global-nav">
+          <a href="#" class="global-nav__menu" role="button" aria-label="menu open">
+            <span class="global-nav__menu-title" aria-hidden="true">Menu</span>
+            <span class="global-nav__menu-btn" aria-hidden="true">
+              <i class="global-nav__menu-btn-line"></i>
+              <i class="global-nav__menu-btn-line"></i>
+              <i class="global-nav__menu-btn-line"></i>
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+      <section id="intro" class="section-intro">
+        <div class="section-intro__inner">
+          <div class="section-intro__content-wrap">
+            <div class="section-intro__content">
+              <div class="section-intro__content-inner">
+                <h2 class="section-intro__headline">
+                  <span>DISCOVER</span>
+                  <span>18TH</span>
+                  <span>CENTURY</span>
+                  <span>RURAL LIFE</span>
+                  <span>IN PENN.</span>
+                </h2>
+                <p class="section-intro__description">
+                  A historic house museum, the 1738 Wright’s Ferry Mansion celebrates important examples of pre-1750 fine art, decorative arts, and architecture, as well as a multi-generational narrative reflective of Columbia, Pennsylvania, and its surrounding region.
+                </p>
+                <a href="#" class="common-cta common-cta--yellow-green">
+                  <span class="common-cta__title">Learn more</span>
+                  <i class="common-cta__icon">
+                    <span class="common-cta__icon-text">
+                      →
+                    </span>
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="section-intro__thumbnail-wrap">
+            <div class="section-intro__thumbnail">
+              <img class="home-hero-image" src="./assets/images/section-intro-thumbnail.jpg" alt="Image of the Best Bedchamber in Wright's Ferry Mansion" sizes="100vw" data-scale-image="true" loading="eager" srcset="./assets/images/section-intro-thumbnail-500.jpg 500w, ./assets/images/section-intro-thumbnail-800.jpg 800w, ./assets/images/section-intro-thumbnail-1080.jpg 1080w, ./assets/images/section-intro-thumbnail.jpg 2026w">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer"></footer>
+  </div>
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

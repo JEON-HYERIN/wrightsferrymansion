@@ -316,4 +316,66 @@
   .common-section__eyebrow {
     color: $color-orange;
   }
+  .common-section__content {
+    order: 3;
+    flex-shrink: 0;
+    padding: $gutter-desktop $gutter-desktop 0 0;
+  }
+  .common-section__description,
+  .common-section__cta {
+    max-width: 480px;
+    margin-left: 48px;
+  }
+  &__thumbnail {
+    order: 1;
+    position: relative;
+    width: 50vw;
+    height: 100%;
+    overflow: clip;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__decoration {
+    &-wrap {
+      &--before {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        row-gap: $gutter-desktop;
+        padding-top: 20px;
+        .section-explore__decoration {
+          &:nth-child(1) {
+            position: relative;
+            left: -72px;
+            width: 340px;
+          }
+          &:nth-child(2) {
+            position: relative;
+            left: -59px;
+            width: 140px;
+          }
+        }
+      }
+      &--after {
+        order: 4;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        padding-bottom: $gutter-desktop;
+        .section-explore__decoration {
+          position: relative;
+          transform: translateX(50%);
+          width: 170px;
+        }
+      }
+    }
+  }
 }

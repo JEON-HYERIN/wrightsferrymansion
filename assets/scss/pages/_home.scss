@@ -60,7 +60,7 @@
       position: relative;
       display: flex;
       height: 100dvh;
-      background-color: $color-beige;
+      background-color: $color-primary;
     }
     display: flex;
     position: relative;
@@ -77,7 +77,7 @@
   }
 }
 .section-floating {
-  background-color: $color-beige;
+  background-color: $color-primary;
   &::before {
     content: '';
     position: absolute;
@@ -154,7 +154,7 @@
   }
 }
 .section-mansion {
-  background-color: $color-beige;
+  background-color: $color-primary;
   .common-section__eyebrow {
     color: $color-green;
   }
@@ -265,7 +265,7 @@
     color: $color-silver;
   }
   .common-section__description {
-    color: $color-beige;
+    color: $color-primary;
   }
   .common-section__description,
   .common-section__cta {
@@ -305,5 +305,11 @@
         background-color: #6a1606;
       }
     }
+  }
+}
+.section-explore {
+  background-color: $color-primary;
+  .common-section__eyebrow {
+    color: $color-orange;
   }
 }

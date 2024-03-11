@@ -1,3 +1,6 @@
+#main {
+  display: flex;
+}
 .section-home {  
   &__inner {
     display: flex;
@@ -88,7 +91,7 @@
     bottom: 0;
     max-width: 728px;
   }
-  .common-section__inner {
+  .horizontal-section__inner {
     padding: $gutter-desktop;
   }
   &__image {
@@ -157,7 +160,7 @@
 }
 .section-mansion {
   background-color: $color-primary;
-  .common-section__eyebrow {
+  .horizontal-section__eyebrow {
     color: $color-green;
   }
   &__thumbnail {
@@ -199,14 +202,14 @@
   }
 }
 .section-collection {
-  .common-section__inner {
+  .horizontal-section__inner {
     column-gap: $gutter-desktop;
     padding: $gutter-desktop;
   }
-  .common-section__content {
+  .horizontal-section__content {
     padding-top: $gutter-desktop;
   }
-  .common-section__eyebrow {
+  .horizontal-section__eyebrow {
     color: $color-brown;
   }
   &__work {
@@ -261,18 +264,18 @@
 }
 .section-history {
   background-color: $color-brown;
-  .common-section__inner {
+  .horizontal-section__inner {
     padding: ($gutter-desktop * 2) ($gutter-desktop * 2) $gutter-desktop;
   }
-  .common-section__content {
+  .horizontal-section__content {
     margin-top: -30px;
     color: $color-silver;
   }
-  .common-section__description {
+  .horizontal-section__description {
     color: $color-primary;
   }
-  .common-section__description,
-  .common-section__cta {
+  .horizontal-section__description,
+  .horizontal-section__cta {
     margin-left: 48px;
   }
   &__thumbnail {
@@ -314,16 +317,16 @@
 .section-explore {
   z-index: 1;
   background-color: $color-primary;
-  .common-section__eyebrow {
+  .horizontal-section__eyebrow {
     color: $color-orange;
   }
-  .common-section__content {
+  .horizontal-section__content {
     order: 3;
     flex-shrink: 0;
     padding: $gutter-desktop $gutter-desktop 0 0;
   }
-  .common-section__description,
-  .common-section__cta {
+  .horizontal-section__description,
+  .horizontal-section__cta {
     max-width: 480px;
     margin-left: 48px;
   }

@@ -1,4 +1,4 @@
-.common-section__cta {
+.horizontal-section__cta {
   position: relative;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@
     text-transform: uppercase;
     color: $color-black;
     transition: letter-spacing .2s cubic-bezier(.165,.84,.44,1);
-    .common-section__cta:hover & {
+    .horizontal-section__cta:hover & {
       letter-spacing: 1px;
     }
   }
@@ -28,7 +28,7 @@
     transition-property: transform;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(.165,.84,.44,1);
-    .common-section__cta:hover & {
+    .horizontal-section__cta:hover & {
       transform: translateX(5px);
     }
     &::before {
@@ -42,7 +42,7 @@
       background-color: $color-black;
       border-radius: inherit;
       transition: inherit;
-      .common-section__cta:hover & {
+      .horizontal-section__cta:hover & {
         transform: scale(1.1);
       }
     }
@@ -53,16 +53,16 @@
       transition-property: color;
       transition-timing-function: inherit;
       transition-duration: inherit;
-      .common-section__cta:hover & {
+      .horizontal-section__cta:hover & {
         color: $color-white;
       }
     }
   }
   &--yellow-green {
-    .common-section__cta__title {
+    .horizontal-section__cta__title {
       color: $color-white;
     }
-    .common-section__cta__icon {
+    .horizontal-section__cta__icon {
       border-color: $color-yellow-green;
       &::before {
         background-color: $color-yellow-green;
@@ -71,15 +71,15 @@
         color: $color-yellow-green;
       }
     }
-    &:hover .common-section__cta__icon-text {
+    &:hover .horizontal-section__cta__icon-text {
       color: $color-black;
     }
   }
   &--silver {
-    .common-section__cta__title {
+    .horizontal-section__cta__title {
       color: $color-silver;
     }
-    .common-section__cta__icon {
+    .horizontal-section__cta__icon {
       border-color: $color-silver;
       &::before {
         background-color: $color-silver;
@@ -88,7 +88,7 @@
         color: $color-silver;
       }
     }
-    &:hover .common-section__cta__icon-text {
+    &:hover .horizontal-section__cta__icon-text {
       color: $color-black;
     }
   }

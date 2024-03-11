@@ -58,7 +58,7 @@ button {
   clip: rect(0 0 0 0);
 }
 
-.common-section {
+.horizontal-section {
   &__container {
     display: flex;
     flex-wrap: nowrap;
@@ -85,7 +85,7 @@ button {
   }
 }
 
-.common-section__content {
+.horizontal-section__content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -98,14 +98,14 @@ button {
   }
 }
 
-.common-section__eyebrow {
+.horizontal-section__eyebrow {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .5px;
   text-align: center;
   text-transform: uppercase;
 }
-.common-section__headline {
+.horizontal-section__headline {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,7 +123,7 @@ button {
     font-style: italic;
   }
 }
-.common-section__description {
+.horizontal-section__description {
   display: flex;
   flex-direction: column;
   gap: 12px;

@@ -146,11 +146,13 @@
       max-width: 205px;
     }
   }
-  .common-section__decoration {
+  &__object {
+    position: absolute;
     top: 0;
     right: 0;
     width: 540px;
     transform: translate(50%, -36%);
+    pointer-events: none;
   }
 }
 .section-mansion {
@@ -188,10 +190,12 @@
       }
     }
   }
-  .common-section__decoration {
+  &__object {
+    position: absolute;
     bottom: 0;
     right: 0;
     transform: translateX(50%);
+    pointer-events: none;
   }
 }
 .section-collection {

@@ -109,3 +109,7 @@ button {
   line-height: 1.4;
   color: $color-black--rgba-6;
 }
+.common-decoration {
+  position: absolute;
+  pointer-events: none;
+}

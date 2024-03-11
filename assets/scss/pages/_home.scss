@@ -312,6 +312,7 @@
   }
 }
 .section-explore {
+  z-index: 1;
   background-color: $color-primary;
   .common-section__eyebrow {
     color: $color-orange;
@@ -376,6 +377,20 @@
           width: 170px;
         }
       }
+    }
+  }
+}
+.section-video {
+  &__embedded {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100%;
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

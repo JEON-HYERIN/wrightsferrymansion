@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -97,14 +98,21 @@ button {
   align-items: center;
   font-family: Romie, sans-serif;
   font-size: clamp(36px, 5.5vw, 75px);
+  font-weight: 400;
   line-height: .9;
   text-align: center;
   text-transform: uppercase;
+  font-feature-settings: 'liga', 'dlig', 'hlig', 'calt';
+  .lower-case {
+    text-transform: lowercase;
+    font-style: italic;
+  }
 }
 .common-description {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-width: 420px;
   font-size: 16px;
   line-height: 1.4;
   color: $color-black--rgba-6;

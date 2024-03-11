@@ -82,7 +82,7 @@
       position: relative;
       display: flex;
       height: 100dvh;
-      background-color: rgba(238,236,232,.63);
+      background-color: $color-beige;
     }
     display: flex;
     position: relative;
@@ -99,8 +99,7 @@
   }
 }
 .section-floating {
-  position: relative;
-  background-color: rgba(238,236,232,.63);
+  background-color: $color-beige;
   &::before {
     content: '';
     position: absolute;
@@ -179,23 +178,70 @@
     width: 540px;
     transform: translate(50%, -36%);
     pointer-events: none;
-    img {
-      display: block;
-    }
   }
 }
 .section-mansion {
+  background-color: $color-beige;
   &__inner {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
+    height: 100%;
   }
-  &__content-wrap {
-    height: 100dv;
-    display: flex;
-    position: relative;
+  &__content {
+    &-wrap {
+
+    }
   }
-  .common-description {
+  .common-eyebrow {
+    color: #52870b;
+  }
+  .common-description,
+  .common-cta {
     max-width: 420px;
+  }
+  &__thumbnail {
+    &-wrap {
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 140px;
+      position: relative;
+      height: 100%;
+    }
+    & {
+      &--front {
+        position: relative;
+        z-index: 1;
+        max-width: 520px;
+      }
+      &--back {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          /* right: 0; */
+          /* bottom: 0; */
+          -o-object-fit: cover;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
   }
 }

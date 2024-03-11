@@ -59,30 +59,46 @@ button {
 }
 
 .common-section {
-  // display: flex;
-  position: relative;
-  height: 100dvh;
-  flex-shrink: 0;
-  max-width: 100vw;
-  // overflow: hidden;
-  // padding: $gutter-desktop;
-  // background-color: rgba(238,236,232,.63);
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    // height: 100dvh;
+    overscroll-behavior: none;
+    width: 100vw;
+    height: 100dvh;
+  }
+  & {
+    // display: flex;
+    position: relative;
+    height: 100dvh;
+    flex-shrink: 0;
+    max-width: 100vw;
+    // overflow: hidden;
+    // padding: $gutter-desktop;
+    // background-color: rgba(238,236,232,.63);
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.common-content {
+.common-section__content {
   position: relative;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 24px;
   }
 }
 
-.common-eyebrow {
+.common-section__eyebrow {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .5px;
@@ -92,7 +108,7 @@ button {
     color: $color-green;
   }
 }
-.common-headline {
+.common-section__headline {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,13 +118,15 @@ button {
   line-height: .9;
   text-align: center;
   text-transform: uppercase;
-  font-feature-settings: 'liga', 'dlig', 'hlig', 'calt';
+  &--feature {
+    font-feature-settings: 'liga', 'dlig', 'hlig', 'calt';
+  }
   .lower-case {
     text-transform: lowercase;
     font-style: italic;
   }
 }
-.common-description {
+.common-section__description {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -117,7 +135,7 @@ button {
   line-height: 1.4;
   color: $color-black--rgba-6;
 }
-.common-decoration {
+.common-section__decoration {
   position: absolute;
   pointer-events: none;
 }

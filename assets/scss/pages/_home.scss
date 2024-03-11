@@ -255,3 +255,55 @@
     }
   }
 }
+.section-history {
+  background-color: $color-brown;
+  .common-section__inner {
+    padding: ($gutter-desktop * 2) ($gutter-desktop * 2) $gutter-desktop;
+  }
+  .common-section__content {
+    margin-top: -30px;
+    color: $color-silver;
+  }
+  .common-section__description {
+    color: $color-beige;
+  }
+  .common-section__description,
+  .common-section__cta {
+    margin-left: 48px;
+  }
+  &__thumbnail {
+    &-wrap {
+      padding-left: 72px;
+    }
+    &--front {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 3 / 2;
+      }
+    }
+    &--back {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      max-width: 580px;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: #6a1606;
+      }
+    }
+  }
+}

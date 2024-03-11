@@ -75,4 +75,21 @@
       color: $color-black;
     }
   }
+  &--silver {
+    .common-section__cta__title {
+      color: $color-silver;
+    }
+    .common-section__cta__icon {
+      border-color: $color-silver;
+      &::before {
+        background-color: $color-silver;
+      }
+      &-text {
+        color: $color-silver;
+      }
+    }
+    &:hover .common-section__cta__icon-text {
+      color: $color-black;
+    }
+  }
 }

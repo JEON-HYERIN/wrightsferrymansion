@@ -10,9 +10,6 @@
     text-transform: uppercase;
     color: $color-black;
     transition: letter-spacing .2s cubic-bezier(.165,.84,.44,1);
-    // .common-cta--yellow-green & {
-    //   color: $color-white;
-    // }
     .common-cta:hover & {
       letter-spacing: 1px;
     }
@@ -29,9 +26,6 @@
     transition-property: transform;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(.165,.84,.44,1);
-    // .common-cta--yellow-green & {
-    //   border-color: $color-yellow-green;
-    // }
     .common-cta:hover & {
       transform: translateX(5px);
     }
@@ -46,9 +40,6 @@
       background-color: $color-black;
       border-radius: inherit;
       transition: inherit;
-      // .common-cta--yellow-green & {
-      //   background-color: $color-yellow-green;
-      // }
       .common-cta:hover & {
         transform: scale(1.1);
       }
@@ -63,12 +54,6 @@
       .common-cta:hover & {
         color: $color-white;
       }
-      // .common-cta--yellow-green & {
-      //   color: $color-yellow-green;
-      // }
-      // .common-cta--yellow-green:hover & {
-      //   color: $color-black;
-      // }
     }
   }
   &--yellow-green {

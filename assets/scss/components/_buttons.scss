@@ -92,4 +92,21 @@
       color: $color-black;
     }
   }
+  &--white {
+    .horizontal-section__cta__title {
+      color: $color-white;
+    }
+    .horizontal-section__cta__icon {
+      border-color: $color-white;
+      &::before {
+        background-color: $color-white;
+      }
+      &-text {
+        color: $color-white;
+      }
+    }
+    &:hover .horizontal-section__cta__icon-text {
+      color: $color-black;
+    }
+  }
 }

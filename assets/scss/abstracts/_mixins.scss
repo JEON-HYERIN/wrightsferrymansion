@@ -1,0 +1,28 @@
+// @mixin common-section-gutter {
+//   padding: $gutter-desktop;
+//   @include tablet {
+//     padding: $gutter-tablet;
+//   }
+//   @include mobile {
+//     padding: $gutter-mobile;
+//   }
+// }
+
+// media query
+@mixin tablet {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}

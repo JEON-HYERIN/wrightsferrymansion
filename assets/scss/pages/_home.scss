@@ -253,13 +253,7 @@
       }
     }
     &-arrow {
-      overflow-x: clip;
-      font-size: 0;
-      line-height: 0;
-      transition: font-size .3s;
-      .section-collection__work-link:hover & {
-        font-size: 8vmin;
-      }
+      @include arrow('.section-collection__work-link');
     }
   }
 }

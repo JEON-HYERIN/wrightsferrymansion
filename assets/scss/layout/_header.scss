@@ -67,7 +67,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-  &__line {
+  &__lines {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,30 +81,30 @@
       width: 42px;
       height: 42px;
     }
-    i {
-      display: block;
-      width: 20px;
-      height: 1px;
-      background-color: $color-white;
-      transition-property: transform, opacity;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms;
-      header.is-open & {
-        &:nth-child(1) {
-          transform: translateY(6px) rotate(45deg);
-        }
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        &:nth-child(3) {
-          transform: translateY(-6px) rotate(-45deg);
-        }
+  }
+  &__line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: $color-white;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    header.is-open & {
+      &:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
       }
     }
   }
 }
 .global-nav {
-  &__content {
+  &__inner {
     position: fixed;
     top: 0;
     right: 0;
@@ -133,24 +133,22 @@
       padding: $gutter-mobile-small;
     }
   }
+  &__content {
+    flex: 1;
+    display: flex;
+    @include mobile {
+      padding-top: 56px;
+    }
+    @include mobile-small {
+      padding-top: 46px;
+    }
+  }
   &__list {
-    &-wrap {
-      flex: 1;
-      display: flex;
-      @include mobile {
-        padding-top: 56px;
-      }
-      @include mobile-small {
-        padding-top: 46px;
-      }
-    }
-    & {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-    }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
   }
   &__link {
     display: flex;
@@ -161,13 +159,11 @@
       color: $color-yellow-green;
     }
   }
-  &__index {
-    &-wrap {
+  &__column {
+    &--index {
       width: 16px;
     }
-  }
-  &__title {
-    &-wrap {
+    &--title {
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
@@ -175,15 +171,15 @@
       font-family: Romie, sans-serif;
       font-weight: 400;
     }
-    & {
-      font-size: clamp(32px, 5vmin, 55px);
-      line-height: 1;
-      letter-spacing: -.05vw;
-      text-transform: uppercase;
-    }
-    &-arrow {
-      @include arrow('.global-nav__link');
-    }
+  }
+  &__title {
+    font-size: clamp(32px, 5vmin, 55px);
+    line-height: 1;
+    letter-spacing: -.05vw;
+    text-transform: uppercase;
+  }
+  &__arrow {
+    @include arrow('.global-nav__link');
   }
   &__dim {
     position: fixed;
@@ -199,35 +195,33 @@
       opacity: 1;
     }
   }
-  &__information {
-    &-area {
-      display: flex;
-      gap: $gutter-desktop;
-      @include tablet {
-        gap: $gutter-tablet;
-      }
-      @include mobile {
-        gap: $gutter-mobile;
-        padding-bottom: $gutter-mobile;
-        
-      }
-      @include mobile-small {
-        gap: $gutter-mobile-small;
-        padding-bottom: $gutter-mobile-small;
-      }
-      }
-      & {
-        @include mobile {
-          font-size: 12px;
-          line-height: 16px;
-        }
-        @include mobile-small {
-          font-size: 10px;
-          line-height: 13px;
-        }
-      }
-      &-title {
-        font-weight: 700;
-      }
+}
+.nav-information {
+  display: flex;
+  gap: $gutter-desktop;
+  @include tablet {
+    gap: $gutter-tablet;
+  }
+  @include mobile {
+    gap: $gutter-mobile;
+    padding-bottom: $gutter-mobile;
+    
+  }
+  @include mobile-small {
+    gap: $gutter-mobile-small;
+    padding-bottom: $gutter-mobile-small;
+  }
+  &__column {
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include mobile-small {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+  &__title {
+    font-weight: 700;
   }
 }

@@ -17,7 +17,7 @@
 <body>
   <div id="wrap">
     <div id="skip-nav">
-      <a href="#main">Skip to main content area</a>
+      <a href="#page">Skip to main content area</a>
     </div>
     <!-- Header -->
     <header class="header">
@@ -25,7 +25,7 @@
         <h1 class="header__title">
           <a href="/">Wright's Ferry Mansion</a>
         </h1>
-        <a href="/" class="header__logo" title="Wright's Ferry Mansion Home Page">
+        <a href="/" class="header__logo" aria-label="Wright's Ferry Mansion Home Page">
           <svg width="40" height="40" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g>
             <path d="M25.5403 24.0682H21.0833V16.7002H25.5403V24.0682ZM30.3238 30.3565H34.7808V37.7244H30.3238V30.3565ZM30.3238 16.7002H34.7808V24.0682H30.3238V16.7002ZM36.9903 30.3565H41.4473V37.7244H36.9903V30.3565ZM36.9903 16.7002H41.4473V24.0682H36.9903V16.7002ZM16.2834 24.0682H11.8264V16.7002H16.2834V24.0682ZM16.2834 37.7244H11.8264V30.3565H16.2834V37.7244ZM9.67139 24.0682H5.21439V16.7002H9.67139V24.0682ZM9.67139 37.7244H5.21439V30.3565H9.67139V37.7244ZM0.828125 17.5086V45.6838C0.828125 45.6838 18.7759 45.7109 19.7337 45.7109V30.3456C19.7337 28.0777 21.5241 26.7159 23.641 26.7159C25.758 26.7159 27.5484 28.1157 27.5484 30.3456V45.6838H45.8281V16.8575L22.8955 0.710938L0.828125 17.5086Z" fill="white"></path>
@@ -34,139 +34,141 @@
         </a>
         <div class="header__nav-menu">
           <div class="nav-menu">
-            <a href="#" class="nav-menu__btn" role="button" title="menu open">
+            <button type="button" class="nav-menu__btn" aria-label="menu open">
               <span class="nav-menu__title" aria-hidden="true">Menu</span>
-              <span class="nav-menu__line">
-                <i></i>
-                <i></i>
-                <i></i>
+              <span class="nav-menu__lines">
+                <i class="nav-menu__line"></i>
+                <i class="nav-menu__line"></i>
+                <i class="nav-menu__line"></i>
               </span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
       <div class="global-nav">
-        <div class="global-nav__content">
-          <nav class="global-nav__list-wrap">
+        <div class="global-nav__inner">
+          <nav class="global-nav__content">
             <ul class="global-nav__list">
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">01</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">Home</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">02</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">About</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">03</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">History</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">04</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">LSvHF Collection</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">05</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">Virtual Tour</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">06</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">Plan a Visit</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">07</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">Book Shop</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
               <li class="global-nav__item">
                 <a href="#" class="global-nav__link">
-                  <div class="global-nav__index-wrap">
+                  <div class="global-nav__column global-nav__column--index">
                     <span class="global-nav__index">08</span>
                   </div>
-                  <div class="global-nav__title-wrap">
+                  <div class="global-nav__column global-nav__column--title">
                     <strong class="global-nav__title">Contact Us</strong>
-                    <span class="global-nav__title-arrow">→</span>
+                    <span class="global-nav__arrow">→</span>
                   </div>
                 </a>
               </li>
             </ul>
           </nav>
-          <div class="global-nav__information-area">
-            <div class="global-nav__information">
-              <strong class="global-nav__information-title">Wright’s Ferry Mansion</strong>
-              <p class="global-nav__information-description">
-                38 S 2nd St,<br />
-                Columbia, PA 17512
-              </p>
-            </div>
-            <div class="global-nav__information">
-              <strong class="global-nav__information-title">Contact us</strong>
-              <p class="global-nav__information-description">
-                <a href="#" class="global-nav__information-link">(717) 684-4325 →</a>
-              </p>
-              <p class="global-nav__information-description">
-                <a href="#" class="global-nav__information-link">Email us →</a>
-              </p>
+          <div class="global-nav__information">
+            <div class="nav-information">
+              <div class="nav-information__column">
+                <strong class="nav-information__title">Wright’s Ferry Mansion</strong>
+                <p class="nav-information__description">
+                  38 S 2nd St,<br />
+                  Columbia, PA 17512
+                </p>
+              </div>
+              <div class="nav-information__column">
+                <strong class="nav-information__title">Contact us</strong>
+                <p class="nav-information__description">
+                  <a href="#" class="nav-information__link">(717) 684-4325 →</a>
+                </p>
+                <p class="nav-information__description">
+                  <a href="#" class="nav-information__link">Email us →</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div class="global-nav__dim"></div>
       </div>
     </header>
-    <div class="horizontal-section__container">
+    <div id="page" class="horizontal-page">
       <!-- Main -->
-      <main id="main">
+      <main class="main">
         <section class="horizontal-section section-home">
-          <div class="section-home__inner">
-            <div class="section-home__content-wrap">
+          <div class="horizontal-section__inner">
+            <div class="section-home__card">
               <div class="section-home__content">
                 <h2 class="section-home__headline">
                   <span>DISCOVER</span>
@@ -178,51 +180,51 @@
                 <p class="section-home__description">
                   A historic house museum, the 1738 Wright’s Ferry Mansion celebrates important examples of pre-1750 fine art, decorative arts, and architecture, as well as a multi-generational narrative reflective of Columbia, Pennsylvania, and its surrounding region.
                 </p>
-                <a href="#" class="horizontal-section__cta horizontal-section__cta--yellow-green">
-                  <span class="horizontal-section__cta__title">Learn more</span>
-                  <i class="horizontal-section__cta__icon">
-                    <span class="horizontal-section__cta__icon-text">
-                      →
-                    </span>
-                  </i>
-                </a>
+                <div class="horizontal-section__cta">
+                  <a href="#" class="common-cta common-cta--yellow-green">
+                    <span class="common-cta__title">Learn more</span>
+                    <i class="common-cta__icon">
+                      <span class="common-cta__arrow">
+                        →
+                      </span>
+                    </i>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="section-home__thumbnail-wrap">
-              <div class="section-home__thumbnail">
-                <img src="./assets/images/section-home-thumbnail.jpg" srcset="./assets/images/section-home-thumbnail-500.jpg 500w, 
-                        ./assets/images/section-home-thumbnail-800.jpg 800w, 
-                        ./assets/images/section-home-thumbnail-1080.jpg 1080w, 
-                        ./assets/images/section-home-thumbnail.jpg 2026w" sizes="100vw"
-                  alt="Image of the Best Bedchamber in Wright's Ferry Mansion" />
-              </div>
+            <div class="section-home__thumbnail">
+              <img src="./assets/images/section-home-thumbnail.jpg" srcset="./assets/images/section-home-thumbnail-500.jpg 500w, 
+                      ./assets/images/section-home-thumbnail-800.jpg 800w, 
+                      ./assets/images/section-home-thumbnail-1080.jpg 1080w, 
+                      ./assets/images/section-home-thumbnail.jpg 2026w" sizes="100vw"
+                alt="Image of the Best Bedchamber in Wright's Ferry Mansion" />
             </div>
           </div>
         </section>
-        <section class="horizontal-section section-floating">
-          <h2 class="blind">floating section</h2>
+        <section class="horizontal-section section-visual">
+          <h2 class="blind">visual section</h2>
           <div class="horizontal-section__inner">
-            <div class="section-floating__image-wrap">
-              <div class="section-floating__image section-floating__image--main">
-                <div class="section-floating__symbol">
-                  <img src="./assets/images/section-floating-symbol.jpg" alt="Image of the Parlor in Wright's Ferry Mansion" />
+            <div class="section-visual__content">
+              <div class="section-visual__image section-visual__image--main">
+                <div class="section-visual__symbol">
+                  <img src="./assets/images/section-visual-symbol.jpg" alt="Image of the Parlor in Wright's Ferry Mansion" />
                 </div>
-                <div class="section-floating__pattern">
-                  <img src="./assets/images/section-floating-pattern.jpg" srcset="./assets/images/section-floating-pattern-500.jpg 500w, ./assets/images/section-floating-pattern-800.jpg 800w, ./assets/images/section-floating-pattern.jpg 884w" sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, 81vw" aria-hidden="true" alt="" />
+                <div class="section-visual__pattern">
+                  <img src="./assets/images/section-visual-pattern.jpg" srcset="./assets/images/section-visual-pattern-500.jpg 500w, ./assets/images/section-visual-pattern-800.jpg 800w, ./assets/images/section-visual-pattern.jpg 884w" sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, 81vw" aria-hidden="true" alt="" />
                 </div>
               </div>
-              <div class="section-floating__image section-floating__image--side">
-                <div class="section-floating__secondary">
-                  <img src="./assets/images/section-floating-secondary.jpg" srcset="./assets/images/section-floating-secondary-500.jpg 500w, ./assets/images/section-floating-secondary-800.jpg 800w, ./assets/images/section-floating-secondary.jpg 1028w" sizes="(max-width: 767px) 40vw, (max-width: 991px) 15vw, 13vw" alt="Image of the Clock Room in Wright's Ferry Mansion" />
+              <div class="section-visual__image section-visual__image--side">
+                <div class="section-visual__secondary">
+                  <img src="./assets/images/section-visual-secondary.jpg" srcset="./assets/images/section-visual-secondary-500.jpg 500w, ./assets/images/section-visual-secondary-800.jpg 800w, ./assets/images/section-visual-secondary.jpg 1028w" sizes="(max-width: 767px) 40vw, (max-width: 991px) 15vw, 13vw" alt="Image of the Clock Room in Wright's Ferry Mansion" />
                 </div>
               </div>
             </div>
-            <div class="section-floating__object">
-              <img src="./assets/images/section-floating-decoration.png" sizes="48vw" srcset="./assets/images/section-floating-decoration-500.png 500w, ./assets/images/section-floating-decoration-800.png 800w, ./assets/images/section-floating-decoration-1080.png 1080w, ./assets/images/section-floating-decoration.png 1098w" aria-hidden="true" alt="" />
+            <div class="section-visual__object">
+              <img src="./assets/images/section-visual-decoration.png" sizes="48vw" srcset="./assets/images/section-visual-decoration-500.png 500w, ./assets/images/section-visual-decoration-800.png 800w, ./assets/images/section-visual-decoration-1080.png 1080w, ./assets/images/section-visual-decoration.png 1098w" aria-hidden="true" alt="" />
             </div>
           </div>
         </section>
-        <section class="horizontal-section section-mansion">
+        <section class="horizontal-section section-about">
           <div class="horizontal-section__inner">
             <div class="horizontal-section__content">
               <h2 class="horizontal-section__eyebrow">The Mansion</h2>
@@ -233,25 +235,27 @@
               <p class="horizontal-section__description">
                 Wright’s Ferry Mansion has been restored by the Louise Steinman von Hess Foundation with great care to accurately represent the period of 1700-1750, when its builder, Susanna Wright — known as “the blue stocking of the Susquehanna”, engaged in intellectual discourse with some of the most inventive and influential minds of 18th century Philadelphia and beyond.
               </p>
-              <a href="#" class="horizontal-section__cta">
-                <span class="horizontal-section__cta__title">About the mansion</span>
-                <i class="horizontal-section__cta__icon">
-                  <span class="horizontal-section__cta__icon-text">
-                    →
-                  </span>
-                </i>
-              </a>
-            </div>
-            <div class="section-mansion__thumbnail-wrap">
-              <div class="section-mansion__thumbnail section-mansion__thumbnail--front">
-                <img src="./assets/images/section-mansion-thumbnail.jpg" srcset="./assets/images/section-mansion-thumbnail-500.jpg 500w, ./assets/images/section-mansion-thumbnail-800.jpg 800w, ./assets/images/section-mansion-thumbnail.jpg 1040w" sizes="(max-width: 767px) 100vw, 520px" alt="An image of Wright's Ferry Mansion" />
-              </div>
-              <div class="section-mansion__thumbnail section-mansion__thumbnail--back">
-                <img src="./assets/images/section-mansion-texture.jpg" srcset="./assets/images/section-mansion-texture-500.jpg 500w, ./assets/images/section-mansion-texture-800.jpg 800w, ./assets/images/section-mansion-texture.jpg 1200w" sizes="(max-width: 991px) 50vw, 400px" aria-hidden="true" alt="" />
+              <div class="horizontal-section__cta horizontal-section__cta--center">
+                <a href="#" class="common-cta">
+                  <span class="common-cta__title">About the mansion</span>
+                  <i class="common-cta__icon">
+                    <span class="common-cta__arrow">
+                      →
+                    </span>
+                  </i>
+                </a>
               </div>
             </div>
-            <div class="section-mansion__object">
-              <img src="./assets/images/section-mansion-decoration.png" srcset="./assets/images/section-mansion-decoration-500.png 500w, ./assets/images/section-mansion-decoration.png 792w" sizes="(max-width: 991px) 100vw, 350px" alt="" />
+            <div class="section-about__images">
+              <div class="section-about__image section-about__image--front">
+                <img src="./assets/images/section-about-thumbnail.jpg" srcset="./assets/images/section-about-thumbnail-500.jpg 500w, ./assets/images/section-about-thumbnail-800.jpg 800w, ./assets/images/section-about-thumbnail.jpg 1040w" sizes="(max-width: 767px) 100vw, 520px" alt="An image of Wright's Ferry Mansion" />
+              </div>
+              <div class="section-about__image section-about__image--back">
+                <img src="./assets/images/section-about-texture.jpg" srcset="./assets/images/section-about-texture-500.jpg 500w, ./assets/images/section-about-texture-800.jpg 800w, ./assets/images/section-about-texture.jpg 1200w" sizes="(max-width: 991px) 50vw, 400px" aria-hidden="true" alt="" />
+              </div>
+            </div>
+            <div class="section-about__object">
+              <img src="./assets/images/section-about-decoration.png" srcset="./assets/images/section-about-decoration-500.png 500w, ./assets/images/section-about-decoration.png 792w" sizes="(max-width: 991px) 100vw, 350px" alt="" />
             </div>
           </div>
         </section>
@@ -268,123 +272,125 @@
               <p class="horizontal-section__description">
                 The well-researched collection, of rare fine and decorative arts representing American Colonial life for the period of 1700 to 1750 is recognized as one of the most authentic and complete in the Nation.
               </p>
-              <a href="#" class="horizontal-section__cta">
-                <span class="horizontal-section__cta__title">Preview collection</span>
-                <i class="horizontal-section__cta__icon">
-                  <span class="horizontal-section__cta__icon-text">
-                    →
-                  </span>
-                </i>
-              </a>
+              <div class="horizontal-section__cta horizontal-section__cta--center">
+                <a href="#" class="common-cta">
+                  <span class="common-cta__title">Preview collection</span>
+                  <i class="common-cta__icon">
+                    <span class="common-cta__arrow">
+                      →
+                    </span>
+                  </i>
+                </a>
+              </div>
             </div>
-            <ul class="section-collection__work-list">
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">01</span>
+            <ul class="section-collection__list">
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">01</span>
                   </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">All Items</strong>
-                    <span class="section-collection__work-arrow">→</span>
-                  </div>
-                </a>
-              </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">02</span>
-                  </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Fine Art</strong>
-                    <span class="section-collection__work-arrow">→</span>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">All Items</strong>
+                    <span class="section-collection__arrow">→</span>
                   </div>
                 </a>
               </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">03</span>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">02</span>
                   </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Cabinet Work</strong>
-                    <span class="section-collection__work-arrow">→</span>
-                  </div>
-                </a>
-              </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">04</span>
-                  </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Seating</strong>
-                    <span class="section-collection__work-arrow">→</span>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Fine Art</strong>
+                    <span class="section-collection__arrow">→</span>
                   </div>
                 </a>
               </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">05</span>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">03</span>
                   </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Ceramics</strong>
-                    <span class="section-collection__work-arrow">→</span>
-                  </div>
-                </a>
-              </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">06</span>
-                  </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Glass</strong>
-                    <span class="section-collection__work-arrow">→</span>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Cabinet Work</strong>
+                    <span class="section-collection__arrow">→</span>
                   </div>
                 </a>
               </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">07</span>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">04</span>
                   </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Metalwork</strong>
-                    <span class="section-collection__work-arrow">→</span>
-                  </div>
-                </a>
-              </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">08</span>
-                  </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Textiles</strong>
-                    <span class="section-collection__work-arrow">→</span>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Seating</strong>
+                    <span class="section-collection__arrow">→</span>
                   </div>
                 </a>
               </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">09</span>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">05</span>
                   </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Published Works</strong>
-                    <span class="section-collection__work-arrow">→</span>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Ceramics</strong>
+                    <span class="section-collection__arrow">→</span>
                   </div>
                 </a>
               </li>
-              <li class="section-collection__work-item">
-                <a href="#" class="section-collection__work-link">
-                  <div class="section-collection__work-index-wrap">
-                    <span class="section-collection__work-index">10</span>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">06</span>
                   </div>
-                  <div class="section-collection__work-title-wrap">
-                    <strong class="section-collection__work-title">Ephemera</strong>
-                    <span class="section-collection__work-arrow">→</span>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Glass</strong>
+                    <span class="section-collection__arrow">→</span>
+                  </div>
+                </a>
+              </li>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">07</span>
+                  </div>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Metalwork</strong>
+                    <span class="section-collection__arrow">→</span>
+                  </div>
+                </a>
+              </li>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">08</span>
+                  </div>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Textiles</strong>
+                    <span class="section-collection__arrow">→</span>
+                  </div>
+                </a>
+              </li>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">09</span>
+                  </div>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Published Works</strong>
+                    <span class="section-collection__arrow">→</span>
+                  </div>
+                </a>
+              </li>
+              <li class="section-collection__item">
+                <a href="#" class="section-collection__link">
+                  <div class="section-collection__column section-collection__column--index">
+                    <span class="section-collection__index">10</span>
+                  </div>
+                  <div class="section-collection__column section-collection__column--title">
+                    <strong class="section-collection__title">Ephemera</strong>
+                    <span class="section-collection__arrow">→</span>
                   </div>
                 </a>
               </li>
@@ -402,20 +408,22 @@
               <p class="horizontal-section__description">
                 Largely unaltered from its original construction, Wright’s Ferry Mansion was acquired in 1973 by Richard C. and Louise Steinman von Hess, both of whom demonstrated life-long commitments to historic preservation and art connoisseurship. Together, they began a long and most thoughtful restoration of this unique example of Pennsylvania Colonial architecture.
               </p>
-              <a href="#" class="horizontal-section__cta horizontal-section__cta--silver">
-                <span class="horizontal-section__cta__title">Mansion History</span>
-                <i class="horizontal-section__cta__icon">
-                  <span class="horizontal-section__cta__icon-text">
-                    →
-                  </span>
-                </i>
-              </a>
+              <div class="horizontal-section__cta horizontal-section__cta--center">
+                <a href="#" class="common-cta common-cta--silver">
+                  <span class="common-cta__title">Mansion History</span>
+                  <i class="common-cta__icon">
+                    <span class="common-cta__arrow">
+                      →
+                    </span>
+                  </i>
+                </a>
+              </div>
             </div>
-            <div class="section-history__thumbnail-wrap">
-              <div class="section-history__thumbnail section-history__thumbnail--front">
+            <div class="section-history__images">
+              <div class="section-history__image section-history__image--front">
                 <img src="./assets/images/section-history-thumbnail.jpg" srcset="./assets/images/section-history-thumbnail-500.jpg 500w, ./assets/images/section-history-thumbnail-800.jpg 800w, ./assets/images/section-history-thumbnail.jpg 1274w" sizes="(max-width: 767px) 100vw, 680px" alt="An image of Wrights Ferry Mansion" />
               </div>
-              <div class="section-history__thumbnail section-history__thumbnail--back">
+              <div class="section-history__image section-history__image--back">
                 <img src="./assets/images/section-history-pattern.jpg" srcset="./assets/images/section-history-pattern-500.jpg 500w, ./assets/images/section-history-pattern-800.jpg 800w, ./assets/images/section-history-pattern.jpg 1180w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 459.1953125px" alt="" />
               </div>
             </div>
@@ -432,19 +440,21 @@
               <p class="horizontal-section__description">
                 Explore Wright’s Ferry Mansion while online with our interactive virtual tour experience. Guided by the late Joseph Keller Kindig, III, an internationally recognized authority on American decorative arts and design, as well as both an advisor to the von Hesses regarding the furnishing of Wright’s Ferry Mansion and a one-time board member of the Louise Steinman von Hess Foundation.  Our virtual tours of individual rooms provide comprehensive and immersive looks at the daily life of 18th-century Susanna Wright.
               </p>
-              <a href="#" class="horizontal-section__cta">
-                <span class="horizontal-section__cta__title">Explore the mansion</span>
-                <i class="horizontal-section__cta__icon">
-                  <span class="horizontal-section__cta__icon-text">
-                    →
-                  </span>
-                </i>
-              </a>
+              <div class="horizontal-section__cta">
+                <a href="#" class="common-cta">
+                  <span class="common-cta__title">Explore the mansion</span>
+                  <i class="common-cta__icon">
+                    <span class="common-cta__arrow">
+                      →
+                    </span>
+                  </i>
+                </a>
+              </div>
             </div>
             <div class="section-explore__thumbnail">
               <img src="./assets/images/section-explore-thumbnail.jpg" srcset="./assets/images/section-explore-thumbnail-500.jpg 500w, ./assets/images/section-explore-thumbnail-800.jpg 800w, ./assets/images/section-explore-thumbnail.jpg 1370w" sizes="(max-width: 991px) 100vw, 50vw" alt="A view from the upstairs Work Room in Wright's Ferry Mansion" />
             </div>
-            <div class="section-explore__decoration-wrap section-explore__decoration-wrap--before">
+            <div class="section-explore__decorations section-explore__decorations--before">
               <div class="section-explore__decoration">
                 <img src="./assets/images/section-explore-decoration-01.jpg" srcset="./assets/images/section-explore-decoration-01-500.jpg 500w, ./assets/images/section-explore-decoration-01-800.jpg 800w, ./assets/images/section-explore-decoration-01.jpg 1693w" sizes="(max-width: 767px) 55vw, 340px" alt="An image of colorful fabrics from Wright's Ferry Mansion" />
               </div>
@@ -452,7 +462,7 @@
                 <img class="explore-the-mansion-decoration-image-two" src="./assets/images/section-explore-decoration-02.jpg" srcset="./assets/images/section-explore-decoration-02-500.jpg 500w, ./assets/images/section-explore-decoration-02.jpg 700w" sizes="(max-width: 767px) 23vw, 140px" alt="An image of the upstairs hallway, replete with grandfather clock in Wright's Ferry Mansion" />
               </div>
             </div>
-            <div class="section-explore__decoration-wrap section-explore__decoration-wrap--after">
+            <div class="section-explore__decorations section-explore__decorations--after">
               <div class="section-explore__decoration">
                 <img src="./assets/images/section-explore-decoration-03.jpg" srcset="./assets/images/section-explore-decoration-03-800.jpg 800w, ./assets/images/section-explore-decoration-03.jpg 1025w" sizes="170px" alt="An image of the upstairs hallway into the Second Bedchamber in Wright's Ferry Mansion" />
               </div>
@@ -480,73 +490,98 @@
               <h3 class="horizontal-section__headline">
                 <span>Want to visit WRIGHT’S FERRY mansion?</span>
               </h3>
-              <a href="#" class="horizontal-section__cta horizontal-section__cta--white">
-                <span class="horizontal-section__cta__title">Here's how</span>
-                <i class="horizontal-section__cta__icon">
-                  <span class="horizontal-section__cta__icon-text">
-                    →
-                  </span>
-                </i>
-              </a>
+              <div class="horizontal-section__cta">
+                <a href="#" class="common-cta common-cta--white">
+                  <span class="common-cta__title">Here's how</span>
+                  <i class="common-cta__icon">
+                    <span class="common-cta__arrow">
+                      →
+                    </span>
+                  </i>
+                </a>
+              </div>
             </div>
-            <div class="section-footer__card-image">
+            <div class="section-footer__image">
               <img src="./assets/images/footer-background.jpg" srcset="./assets/images/footer-background-500.jpg 500w, ./assets/images/footer-background-800.jpg 800w, ./assets/images/footer-background-1080.jpg 1080w, ./assets/images/footer-background-1600.jpg 1600w, ./assets/images/footer-background.jpg 1677w" sizes="(max-width: 991px) 100vw, 680px" aria-hidden="true" alt="" />
             </div>
           </div>
           <div class="section-footer__information">
-            <ul class="section-footer__contact-list">
-              <li class="section-footer__contact-item">
-                <strong class="section-footer__contact-title">Address</strong>
-                <p class="section-footer__contact-description">
-                  38 S 2nd St<br />
-                  P.O. Box 68<br />
-                  Columbia, PA 17512<br />
-                </p>
-              </li>
-              <li class="section-footer__contact-item">
-                <strong class="section-footer__contact-title">Phone</strong>
-                <p class="section-footer__contact-description">
-                  <a href="#" class="section-footer__contact-link">+1 (717) 684-4325</a>
-                </p>
-              </li>
-              <li class="section-footer__contact-item">
-                <strong class="section-footer__contact-title">Tours</strong>
-                <p class="section-footer__contact-description">
-                  <a href="#" class="section-footer__contact-link">Schedule a Tour →</a></p>
-              </li>
-            </ul>
-            <div class="section-footer__nav-area">
-              <ul class="section-footer__nav-list">
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Home</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">About</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">History</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Collection</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Tour Policies</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Virtual Tour</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Plan a Visit</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Book Shop</a>
-                </li>
-                <li class="section-footer__nav-item">
-                  <a href="#" class="section-footer__nav-link">Contact Us</a>
-                </li>
-              </ul>
+            <div class="section-footer__row section-footer__row--top">
+              <div class="section-footer__contact">
+                <div class="footer-contact">
+                  <ul class="footer-contact__list">
+                    <li class="footer-contact__item">
+                      <div class="footer-contact__column footer-contact__column--title">
+                        <strong class="footer-contact__title">Address</strong>
+                      </div>
+                      <div class="footer-contact__column footer-contact__column--description">
+                        <p class="footer-contact__description">
+                          38 S 2nd St<br />
+                          P.O. Box 68<br />
+                          Columbia, PA 17512<br />
+                        </p>
+                      </div>
+                    </li>
+                    <li class="footer-contact__item">
+                      <div class="footer-contact__column footer-contact__column--title">
+                        <strong class="footer-contact__title">Phone</strong>
+                      </div>
+                      <div class="footer-contact__column footer-contact__column--description">
+                        <p class="footer-contact__description">
+                          <a href="#" class="footer-contact__link">+1 (717) 684-4325</a>
+                        </p>
+                      </div>
+                    </li>
+                    <li class="footer-contact__item">
+                      <div class="footer-contact__column footer-contact__column--title">
+                        <strong class="footer-contact__title">Tours</strong>
+                      </div>
+                      <div class="footer-contact__column footer-contact__column--description">
+                        <p class="footer-contact__description">
+                          <a href="#" class="footer-contact__link">Schedule a Tour →</a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="section-footer__row section-footer__row--bottom">
+              <div class="section-footer__nav">
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Home</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">About</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">History</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Collection</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Tour Policies</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Virtual Tour</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Plan a Visit</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Book Shop</a>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a href="#" class="footer-nav__link">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div class="section-footer__copyright">
-                <p class="section-footer__copyright-text">
+                <p>
                   Copyright 2024 Louise Steinman von Hess Foundation.<br />
                   All rights reserved. Website by 
                   <a href="https://www.itsbombom.com/" target="_blank">Bom Bom</a>

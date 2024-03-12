@@ -17,6 +17,7 @@ body {
 }
 
 button {
+  padding: 0;
   cursor: pointer;
   &:focus:not(:focus-visible) {
     outline: none;
@@ -61,21 +62,22 @@ button {
   clip: rect(0 0 0 0);
 }
 
+.horizontal-page {
+  display: flex;
+  // width: 100vw;
+  height: 100dvh;
+  overscroll-behavior: none;
+  @include tablet {
+    flex-direction: column;
+    height: auto;
+  }
+  .header.is-open + & {
+    pointer-events: none;
+  }
+}
 .horizontal-section {
-  &__container {
-    display: flex;
-    // width: 100vw;
-    height: 100dvh;
-    overscroll-behavior: none;
-    @include tablet {
-      flex-direction: column;
-      height: auto;
-    }
-  }
-  & {
-    position: relative;
-    background-color: $color-primary;
-  }
+  position: relative;
+  background-color: $color-primary;
   &__inner {
     display: flex;
     align-items: center;
@@ -96,7 +98,6 @@ button {
       row-gap: 20px;
     }
   }
-  
   &__eyebrow {
     font-size: 12px;
     font-weight: 600;
@@ -140,5 +141,12 @@ button {
     font-size: 16px;
     line-height: 1.4;
     color: $color-black--rgba;
+  }
+  &__cta {
+    display: flex;
+    width: 100%;
+    &--center {
+      justify-content: center;
+    }
   }
 }

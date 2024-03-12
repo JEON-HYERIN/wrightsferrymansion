@@ -1,4 +1,6 @@
-.horizontal-section__cta {
+$compontent-name: 'common-cta';
+
+.#{$compontent-name} {
   position: relative;
   display: flex;
   align-items: center;
@@ -12,7 +14,7 @@
     text-transform: uppercase;
     color: $color-black;
     transition: letter-spacing .2s cubic-bezier(.165,.84,.44,1);
-    .horizontal-section__cta:hover & {
+    .#{$compontent-name}:hover & {
       letter-spacing: 1px;
     }
   }
@@ -28,7 +30,7 @@
     transition-property: transform;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(.165,.84,.44,1);
-    .horizontal-section__cta:hover & {
+    .#{$compontent-name}:hover & {
       transform: translateX(5px);
     }
     &::before {
@@ -42,70 +44,70 @@
       background-color: $color-black;
       border-radius: inherit;
       transition: inherit;
-      .horizontal-section__cta:hover & {
+      .#{$compontent-name}:hover & {
         transform: scale(1.1);
       }
     }
-    &-text {
-      position: relative;
-      color: $color-black;
-      line-height: 1;
-      transition-property: color;
-      transition-timing-function: inherit;
-      transition-duration: inherit;
-      .horizontal-section__cta:hover & {
-        color: $color-white;
-      }
+  }
+  &__arrow {
+    position: relative;
+    color: $color-black;
+    line-height: 1;
+    transition-property: color;
+    transition-timing-function: inherit;
+    transition-duration: inherit;
+    .#{$compontent-name}:hover & {
+      color: $color-white;
     }
   }
   &--yellow-green {
-    .horizontal-section__cta__title {
+    .#{$compontent-name}__title {
       color: $color-white;
     }
-    .horizontal-section__cta__icon {
+    .#{$compontent-name}__icon {
       border-color: $color-yellow-green;
       &::before {
         background-color: $color-yellow-green;
       }
-      &-text {
-        color: $color-yellow-green;
-      }
     }
-    &:hover .horizontal-section__cta__icon-text {
+    .#{$compontent-name}__arrow {
+      color: $color-yellow-green;
+    }
+    &:hover .#{$compontent-name}__arrow {
       color: $color-black;
     }
   }
   &--silver {
-    .horizontal-section__cta__title {
+    .#{$compontent-name}__title {
       color: $color-silver;
     }
-    .horizontal-section__cta__icon {
+    .#{$compontent-name}__icon {
       border-color: $color-silver;
       &::before {
         background-color: $color-silver;
       }
-      &-text {
-        color: $color-silver;
-      }
     }
-    &:hover .horizontal-section__cta__icon-text {
+    .#{$compontent-name}__arrow {
+      color: $color-silver;
+    }
+    &:hover .#{$compontent-name}__arrow {
       color: $color-black;
     }
   }
   &--white {
-    .horizontal-section__cta__title {
+    .#{$compontent-name}__title {
       color: $color-white;
     }
-    .horizontal-section__cta__icon {
+    .#{$compontent-name}__icon {
       border-color: $color-white;
       &::before {
         background-color: $color-white;
       }
-      &-text {
-        color: $color-white;
-      }
     }
-    &:hover .horizontal-section__cta__icon-text {
+    .#{$compontent-name}__arrow {
+      color: $color-white;
+    }
+    &:hover .#{$compontent-name}__arrow {
       color: $color-black;
     }
   }

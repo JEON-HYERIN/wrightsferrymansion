@@ -9,7 +9,6 @@
 // }
 
 @mixin arrow($selector) {
-  overflow-x: clip;
   font-size: 0;
   line-height: 0;
   transition: font-size .3s;

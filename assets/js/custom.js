@@ -41,7 +41,7 @@ function disable() {
 }
 
 headerEl.addEventListener('click', function(event) {
-  if(event.target.classList.contains('header__menu-btn')) {
+  if(event.target.classList.contains('nav-menu__btn')) {
     globalNavMenuBtnToggle();
   }
 });
@@ -65,7 +65,7 @@ function globalNavMenuBtnToggle() {
 }
 
 function navigationOpen() {
-  const globalNavMenuBtn = document.querySelector('.header__menu-btn');
+  const globalNavMenuBtn = document.querySelector('.nav-menu__btn');
 
   headerEl.classList.add('is-open');
   // enable();
@@ -73,7 +73,7 @@ function navigationOpen() {
 }
 
 function navigationClose() {
-  const globalNavMenuBtn = document.querySelector('.header__menu-btn');
+  const globalNavMenuBtn = document.querySelector('.nav-menu__btn');
 
   headerEl.classList.remove('is-open');
   // disable();

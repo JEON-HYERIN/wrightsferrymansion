@@ -2,15 +2,17 @@
 $gutter-desktop: 72px;
 $gutter-tablet: 48px;
 $gutter-mobile: 24px;
+$gutter-mobile-small: 16px;
 
 // color
 $color-primary: rgba(238, 236, 232, .63);
 $color-black: #000;
-$color-black--rgba-6: rgba(0, 0, 0, .6);
+$color-black--rgba: rgba(0, 0, 0, .6);
 $color-white: #fff;
 $color-silver: #eeece8;
 $color-yellow-green: #dcf263;
 $color-green: #52870b;
+$color-deep-green: #3e503a;
 $color-olive: #6a7870;
 $color-brown: #aa4935;
 $color-orange: #ff6320;

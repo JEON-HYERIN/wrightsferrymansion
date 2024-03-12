@@ -1,6 +1,9 @@
 #main {
   display: flex;
   flex-shrink: 0;
+  @include tablet {
+    flex-direction: column;
+  }
 }
 .section-home {  
   &__inner {
@@ -15,7 +18,12 @@
       height: 100dvh;
       padding: 84px $gutter-desktop $gutter-desktop;
       padding-right: clamp(24px, 20vw, 250px);
-      background-color: #3e503a;
+      background-color: $color-deep-green;
+      @include tablet {
+        min-width: 0;
+        height: auto;
+        padding: 102px 16px 48px;
+      }
     }
     & {
       display: flex;
@@ -52,6 +60,12 @@
         text-align: left;
       }
     }
+    @include tablet {
+      font-size: clamp(32px, 12vw, 120px);
+    }
+    @include mobile {
+      font-size: clamp(32px, 17vw, 120px);
+    }
   }
   &__description {
     max-width: 520px;
@@ -65,6 +79,9 @@
       display: flex;
       height: 100dvh;
       background-color: $color-primary;
+      @include tablet {
+        display: none;
+      }
     }
     display: flex;
     position: relative;
@@ -81,7 +98,6 @@
   }
 }
 .section-floating {
-  background-color: $color-primary;
   &::before {
     content: '';
     position: absolute;
@@ -90,10 +106,20 @@
     left: 0;
     right: 0;
     bottom: 0;
+    width: 48vw;
     max-width: 728px;
   }
   .horizontal-section__inner {
     padding: $gutter-desktop;
+    @include tablet {
+      padding: $gutter-tablet;
+    }
+    @include mobile {
+      padding: $gutter-mobile;
+    }
+    @include mobile-small {
+      padding: $gutter-mobile-small;
+    }
   }
   &__image {
     &-wrap {
@@ -101,6 +127,10 @@
       justify-content: space-between;
       align-items: center;
       gap: $gutter-desktop;
+      @include mobile {
+        flex-direction: column;
+        gap: 7vw;
+      }
     }
     & {
       position: relative;
@@ -109,6 +139,9 @@
       flex-shrink: 0;
       width: 85vmin;
       max-width: 868px;
+      @include mobile {
+        width: 100%;
+      }
     }
     &--side {
       min-width: 252px;
@@ -118,6 +151,9 @@
     position: relative;
     z-index: 1;
     padding: 2vw;
+    @include mobile {
+      padding: 24px;
+    }
   }
   &__pattern {
     position: absolute;
@@ -148,6 +184,15 @@
     img {
       width: 13vw;
       max-width: 205px;
+      @include tablet {
+        width: 15vw;
+      }
+      @include mobile {
+        width: 40vw;
+        max-width: none;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+      }
     }
   }
   &__object {
@@ -160,7 +205,17 @@
   }
 }
 .section-mansion {
-  background-color: $color-primary;
+  .horizontal-section__content {
+    @include tablet {
+      padding: $gutter-tablet 0;
+    }
+    @include mobile {
+      padding: $gutter-mobile;
+    }
+    @include mobile-small {
+      padding: 48px $gutter-mobile-small;
+    }
+  }
   .horizontal-section__eyebrow {
     color: $color-green;
   }
@@ -171,7 +226,16 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding: 0 140px;
+      padding: 0 $gutter-desktop;
+      @include tablet {
+        padding: $gutter-tablet;
+      }
+      @include mobile {
+        padding: $gutter-mobile;
+      }
+      @include mobile-small {
+        padding: $gutter-mobile-small;
+      }
     }
     &--front {
       position: relative;
@@ -206,9 +270,31 @@
   .horizontal-section__inner {
     column-gap: $gutter-desktop;
     padding: $gutter-desktop;
+    @include tablet {
+      align-items: flex-start;
+      column-gap: $gutter-tablet;
+      padding: $gutter-tablet;
+    }
+    @include mobile {
+      column-gap: $gutter-mobile;
+      padding: $gutter-mobile;
+    }
+    @include mobile-small {
+      column-gap: $gutter-mobile-small;
+      padding: $gutter-mobile-small $gutter-mobile-small 60px;
+    }
   }
   .horizontal-section__content {
     padding-top: $gutter-desktop;
+    @include tablet {
+      padding: $gutter-tablet 0;
+    }
+    @include mobile {
+      padding: $gutter-mobile 0;
+    }
+    @include mobile-small {
+      padding: 48px 0;
+    }
   }
   .horizontal-section__eyebrow {
     color: $color-brown;
@@ -219,21 +305,26 @@
     }
     &-link {
       display: flex;
-      justify-content: space-between;
       gap: 3.5vw;
       padding: 10px 12vw 10px 0;
       transition: color .3s;
       &:hover {
         color: $color-brown;
       }
+      @include mobile {
+        padding-right: 0;
+      }
     }
     &-index {
       &-wrap {
-        flex-shrink: 0;
+        width: 16px;
       }
       & {
         font-size: 12px;
         font-weight: 600;
+        @include mobile-small {
+          font-size: 10px;
+        }
       }
     }
     &-title {
@@ -250,6 +341,9 @@
         font-size: 5.5vmin;
         text-transform: uppercase;
         line-height: 1;
+        @include mobile {
+          font-size: 7.5vmin;
+        }
       }
     }
     &-arrow {
@@ -261,10 +355,26 @@
   background-color: $color-brown;
   .horizontal-section__inner {
     padding: ($gutter-desktop * 2) ($gutter-desktop * 2) $gutter-desktop;
+    @include tablet {
+      padding: 72px $gutter-tablet $gutter-tablet;
+    }
+    @include mobile {
+      padding: 75px $gutter-mobile 40px;
+    }
+    @include mobile-small {
+      padding-left: $gutter-mobile-small;
+      padding-right: $gutter-mobile-small;
+    }
   }
   .horizontal-section__content {
     margin-top: -30px;
     color: $color-silver;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+  .horizontal-section__headline {
+    color: inherit;
   }
   .horizontal-section__description {
     color: $color-primary;
@@ -272,10 +382,22 @@
   .horizontal-section__description,
   .horizontal-section__cta {
     margin-left: 48px;
+    @include mobile {
+      margin-left: 0;
+    }
   }
   &__thumbnail {
     &-wrap {
       padding-left: 72px;
+      @include tablet {
+        padding: $gutter-tablet;
+      }
+      @include mobile {
+        padding: $gutter-mobile;
+      }
+      @include mobile-small {
+        padding: 60px 0 0;
+      }
     }
     &--front {
       position: relative;
@@ -306,27 +428,43 @@
         height: 50%;
         background-color: #6a1606;
       }
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
 .section-explore {
   z-index: 1;
-  background-color: $color-primary;
-  .horizontal-section__eyebrow {
-    color: $color-orange;
+  .horizontal-section__inner {
+    @include mobile {
+      padding: 0 $gutter-mobile;
+    }
+    @include mobile-small {
+      padding: 0 $gutter-mobile-small;
+    }
   }
   .horizontal-section__content {
-    order: 3;
+    order: 2;
     flex-shrink: 0;
     padding: $gutter-desktop $gutter-desktop 0 0;
+    @include tablet {
+      padding: 48px 0;
+    }
+  }
+  .horizontal-section__eyebrow {
+    color: $color-orange;
   }
   .horizontal-section__description,
   .horizontal-section__cta {
     max-width: 480px;
     margin-left: 48px;
+    @include mobile {
+      margin-left: 0;
+    }
   }
   &__thumbnail {
-    order: 1;
+    order: 0;
     position: relative;
     width: 50vw;
     height: 100%;
@@ -339,11 +477,22 @@
       height: 100%;
       object-fit: cover;
     }
+    @include tablet {
+      width: 100vw;
+      height: 60vw;
+      margin: 0 -#{$gutter-tablet};
+    }
+    @include mobile {
+      margin: 0 -#{$gutter-mobile};
+    }
+    @include mobile-small {
+      margin: 0 -#{$gutter-mobile-small};
+    }
   }
   &__decoration {
     &-wrap {
       &--before {
-        order: 2;
+        order: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -355,30 +504,62 @@
             position: relative;
             left: -72px;
             width: 340px;
+            @include tablet {
+              left: auto;
+              width: 55vw;
+            }
           }
           &:nth-child(2) {
             position: relative;
             left: -59px;
             width: 140px;
+            @include tablet {
+              left: auto;
+              width: 23vw;
+            }
           }
+        }
+        @include tablet {
+          flex-direction: row;
+          column-gap: $gutter-tablet;
+          padding-top: 0;
+          margin-top: -120px;
+        }
+        @include mobile {
+          column-gap: $gutter-mobile;
+        }
+        @include mobile-small {
+          column-gap: $gutter-mobile-small;
+          margin-top: -86px;
         }
       }
       &--after {
-        order: 4;
+        order: 3;
         display: flex;
         align-items: flex-end;
         height: 100%;
         padding-bottom: $gutter-desktop;
+        @include tablet {
+          justify-content: flex-end;
+          padding-bottom: 0;
+          margin-bottom: -61px;
+        }
         .section-explore__decoration {
           position: relative;
           transform: translateX(50%);
           width: 170px;
+          @include tablet {
+            transform: translateX(0);
+          }
         }
       }
     }
   }
 }
 .section-video {
+  @include tablet {
+    display: none;
+  }
   &__embedded {
     position: relative;
     overflow: hidden;

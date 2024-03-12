@@ -15,6 +15,9 @@
   #{$selector}:hover & {
     font-size: 8vmin;
   }
+  @include tablet {
+    display: none;
+  }
 }
 
 // media query

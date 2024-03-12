@@ -21,6 +21,9 @@
     position: relative;
     display: flex;
     align-items: flex-end;
+    @include tablet {
+      justify-content: center;
+    }
     .horizontal-section__content {
       position: relative;
       z-index: 1;
@@ -75,10 +78,10 @@
     justify-content: space-between;
     padding: 0 $gutter-desktop;
     @include tablet {
+      row-gap: $gutter-tablet;
       padding: 36px $gutter-tablet 0;
     }
     @include mobile {
-      row-gap: 48px;
       padding: $gutter-mobile $gutter-mobile 0;
     }
     @include mobile-small {
@@ -98,21 +101,20 @@
     }
     &-title {
       display: block;
-      width: 348px;
+      width: 18vw;
       padding: 10px 0;
       font-family: Inter, sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: .5px;
       text-transform: uppercase;
-      @include tablet {
-        width: 29%;
-      }
       @include mobile-small {
+        width: 25vw;
         font-size: 10px;
       }
     }
     &-description {
+      flex: 1;
       padding: 20px 0;
       font-family: Romie, sans-serif;
       font-size: clamp(24px, 6vmin, 48px);

@@ -20,9 +20,19 @@
       padding-right: clamp(24px, 20vw, 250px);
       background-color: $color-deep-green;
       @include tablet {
-        min-width: 0;
+        justify-content: flex-start;
+        width: 100%;
         height: auto;
-        padding: 102px 16px 48px;
+        padding: 84px $gutter-tablet $gutter-tablet;
+      }
+      @include mobile {
+        padding-left: $gutter-mobile;
+        padding-right: $gutter-mobile;
+      }
+      @include mobile-small {
+        padding-top: 102px;
+        padding-left: $gutter-mobile-small;
+        padding-right: $gutter-mobile-small;
       }
     }
     & {
@@ -44,6 +54,12 @@
     text-transform: uppercase;
     text-align: right;
     color: $color-yellow-green;
+    @include tablet {
+      font-size: clamp(32px, 12vw, 120px);
+    }
+    @include mobile {
+      font-size: clamp(32px, 17vw, 120px);
+    }
     span {
       position: relative;
       &:not(:nth-child(3)) {
@@ -59,12 +75,6 @@
       &:nth-child(5) {
         text-align: left;
       }
-    }
-    @include tablet {
-      font-size: clamp(32px, 12vw, 120px);
-    }
-    @include mobile {
-      font-size: clamp(32px, 17vw, 120px);
     }
   }
   &__description {
@@ -127,8 +137,11 @@
       justify-content: space-between;
       align-items: center;
       gap: $gutter-desktop;
-      @include mobile {
+      @include tablet {
         flex-direction: column;
+        gap: 0;
+      }
+      @include mobile {
         gap: 7vw;
       }
     }
@@ -199,8 +212,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 540px;
-    transform: translate(50%, -36%);
+    max-width: 540px;
+    transform: translate(-50%, -36%);
     pointer-events: none;
   }
 }
@@ -264,6 +277,9 @@
     right: 0;
     transform: translateX(50%);
     pointer-events: none;
+    @include tablet {
+      display: none;
+    }
   }
 }
 .section-collection {
@@ -271,7 +287,6 @@
     column-gap: $gutter-desktop;
     padding: $gutter-desktop;
     @include tablet {
-      align-items: flex-start;
       column-gap: $gutter-tablet;
       padding: $gutter-tablet;
     }
@@ -356,14 +371,15 @@
   .horizontal-section__inner {
     padding: ($gutter-desktop * 2) ($gutter-desktop * 2) $gutter-desktop;
     @include tablet {
-      padding: 72px $gutter-tablet $gutter-tablet;
+      padding: 120px $gutter-tablet $gutter-tablet;
     }
     @include mobile {
-      padding: 75px $gutter-mobile 40px;
+      padding: 75px $gutter-mobile $gutter-mobile;
     }
     @include mobile-small {
       padding-left: $gutter-mobile-small;
       padding-right: $gutter-mobile-small;
+      padding-bottom: $gutter-mobile-small * 2;
     }
   }
   .horizontal-section__content {
@@ -416,17 +432,33 @@
       width: 40%;
       max-width: 580px;
       height: 100%;
-      img {
-        width: 100%;
-        height: 50%;
-        object-fit: cover;
-      }
       &::after {
         content: '';
         display: block;
         width: 100%;
         height: 50%;
         background-color: #6a1606;
+        @include tablet {
+          
+        }
+      }
+      img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+      }
+      @include tablet {
+        top: auto;
+        bottom: 0;
+        max-width: none;
+        width: 100%;
+        height: 360px;
+        display: flex;
+        flex-direction: row-reverse;
+        &::after, img {
+          width: 50%;
+          height: 100%;
+        }
       }
       @include mobile {
         display: none;
@@ -480,7 +512,6 @@
     @include tablet {
       width: 100vw;
       height: 60vw;
-      margin: 0 -#{$gutter-tablet};
     }
     @include mobile {
       margin: 0 -#{$gutter-mobile};
@@ -506,8 +537,10 @@
             width: 340px;
             @include tablet {
               left: auto;
-              width: 55vw;
             }
+            @include mobile {
+               width: 55vw;
+             }
           }
           &:nth-child(2) {
             position: relative;
@@ -515,12 +548,15 @@
             width: 140px;
             @include tablet {
               left: auto;
-              width: 23vw;
             }
+            @include mobile {
+               width: 23vw;
+             }
           }
         }
         @include tablet {
           flex-direction: row;
+          align-items: center;
           column-gap: $gutter-tablet;
           padding-top: 0;
           margin-top: -120px;
@@ -540,17 +576,20 @@
         height: 100%;
         padding-bottom: $gutter-desktop;
         @include tablet {
-          justify-content: flex-end;
+          justify-content: center;
           padding-bottom: 0;
           margin-bottom: -61px;
+        }
+        @include mobile {
+          margin-top: $gutter-mobile;
+        }
+        @include mobile-small {
+          margin-top: $gutter-mobile-small;
         }
         .section-explore__decoration {
           position: relative;
           transform: translateX(50%);
           width: 170px;
-          @include tablet {
-            transform: translateX(0);
-          }
         }
       }
     }

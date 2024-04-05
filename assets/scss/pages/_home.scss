@@ -1,8 +1,37 @@
+.horizontal-page {
+  position: relative;
+  height: 1000vh;
+  @include tablet {
+    height: auto;
+  }
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  @include tablet {
+    position: static;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  &__inner {
+    display: flex;
+    flex-shrink: 0;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+}
 .main {
   display: flex;
   flex-shrink: 0;
+  height: 100%;
   @include tablet {
     flex-direction: column;
+    height: auto;
   }
 }
 .section-home {
@@ -453,6 +482,9 @@
 }
 .section-explore {
   z-index: 1;
+  @include tablet {
+    overflow: hidden;
+  }
   .horizontal-section__inner {
     @include mobile {
       padding: 0 $gutter-mobile;

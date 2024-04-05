@@ -3,23 +3,19 @@
   -webkit-font-smoothing: antialiased;
 }
 
-html,
-body {
-  // overflow-x: hidden;
-}
-
 body {
   font-family: Inter,sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #333;
+  background-color: $color-white;
 }
 
 button {
   padding: 0;
   cursor: pointer;
-  &:focus:not(:focus-visible) {
+  &:focus {
     outline: none;
   }
 }
@@ -48,9 +44,6 @@ button {
 
 #wrap {
   min-width: 320px;
-  @include tablet {
-    overflow-x: hidden;
-  }
 }
 
 .blind {

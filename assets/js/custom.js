@@ -80,7 +80,7 @@ mm.add("(min-width: 992px)", () => {
           // onLeave 떠남
           // onEnterBack 떠났다가 돌아옴
           // onLeaveBack 도달했다가 다시 나감
-          markers: true,
+          // markers: true,
         }
       });
     }
@@ -92,26 +92,30 @@ $(document).on('click', 'a[href="#"]', function (e) {
   e.preventDefault();
 });
 
+// 반응형 대응을 위해 초기세팅
+gsap.set('.global-nav__inner', {x: 0, xPercent: 100}); 
 const navTl = gsap.timeline({
+  paused: true,
   defaults : {
     ease: 'none',
     duration: 0.3
   },
-  paused: true,
   onStart: function() {
     lenis.stop();
     $('.nav-menu__btn').attr('aria-label', 'menu close');
   }
 });
 navTl
-.to('.global-nav__inner', {x: 0, 'pointer-events': 'auto'}, 'a')
+.to('.global-nav__inner', {xPercent: 0, 'pointer-events': 'auto'}, 'a')
 .to('.nav-menu__line:nth-child(1)', {y: 6, rotate: 45}, 'a')
 .to('.nav-menu__line:nth-child(3)', {y: -6, rotate: -45}, 'a')
 .to('.nav-menu__line:nth-child(2)', {opacity: 0}, 'a')
 .to('.global-nav__dim', {opacity: 1}, 'a')
 .to('.header', {'mix-blend-mode': 'normal'}, 'a')
 
-$('.nav-menu__btn').on('click', function() {
+$('.nav-menu__btn').on('click', toggleNav);
+
+function toggleNav() {
   const menuBtn = $('.nav-menu__btn');
   const bodyEl = $('body');
   const CLASSNAME = 'is-open';
@@ -125,4 +129,4 @@ $('.nav-menu__btn').on('click', function() {
     navTl.reverse();
     menuBtn.attr('aria-label', 'menu open');
   }
-});
+}

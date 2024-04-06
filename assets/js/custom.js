@@ -102,7 +102,7 @@ const navTl = gsap.timeline({
   },
   onStart: function() {
     lenis.stop();
-    $('.nav-menu__btn').attr('aria-label', 'menu close');
+    $('.nav-menu').attr('aria-label', 'menu close');
   }
 });
 navTl
@@ -113,10 +113,10 @@ navTl
 .to('.global-nav__dim', {opacity: 1}, 'a')
 .to('.header', {'mix-blend-mode': 'normal'}, 'a')
 
-$('.nav-menu__btn').on('click', toggleNav);
+$('.nav-menu').on('click', toggleNav);
 
 function toggleNav() {
-  const menuBtn = $('.nav-menu__btn');
+  const menuBtn = $('.nav-menu');
   const bodyEl = $('body');
   const CLASSNAME = 'is-open';
 

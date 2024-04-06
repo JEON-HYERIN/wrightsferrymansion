@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -10,6 +9,7 @@ body {
   line-height: 20px;
   color: #333;
   background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
 }
 
 button {

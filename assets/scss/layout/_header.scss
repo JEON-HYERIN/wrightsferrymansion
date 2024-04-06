@@ -54,11 +54,9 @@
   }
 }
 .nav-menu {
-  &__btn {
-    gap: 12px;
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
   &__title {
     font-size: 12px;
     letter-spacing: 1px;
@@ -108,7 +106,6 @@
     padding: $gutter-desktop;
     @include tablet {
       padding: $gutter-tablet;
-      overflow-y: auto;
     }
     @include mobile {
       padding: $gutter-mobile;

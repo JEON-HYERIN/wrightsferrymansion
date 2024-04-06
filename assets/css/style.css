@@ -157,17 +157,19 @@ button:focus {
     align-items: stretch;
   }
 }
-.horizontal-section__content {
-  position: relative;
+.horizontal-section__content, .horizontal-section__textbox {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 24px;
 }
 @media screen and (max-width: 767px) {
-  .horizontal-section__content {
+  .horizontal-section__content, .horizontal-section__textbox {
     row-gap: 20px;
   }
+}
+.horizontal-section__content {
+  position: relative;
 }
 .horizontal-section__eyebrow {
   font-size: 12px;
@@ -213,7 +215,6 @@ button:focus {
 .horizontal-section__description {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   max-width: 420px;
   font-size: 16px;
   line-height: 1.4;
@@ -1190,13 +1191,11 @@ button:focus {
 .section-about .horizontal-section__eyebrow {
   color: #52870b;
 }
-.section-about .horizontal-section__description,
-.section-about .horizontal-section__cta {
+.section-about .horizontal-section__textbox {
   margin-left: 16px;
 }
 @media screen and (max-width: 767px) {
-  .section-about .horizontal-section__description,
-  .section-about .horizontal-section__cta {
+  .section-about .horizontal-section__textbox {
     margin-left: 0;
   }
 }
@@ -1407,18 +1406,16 @@ button:focus {
 .section-history .horizontal-section__headline {
   color: inherit;
 }
-.section-history .horizontal-section__description {
-  color: rgba(238, 236, 232, 0.63);
-}
-.section-history .horizontal-section__description,
-.section-history .horizontal-section__cta {
+.section-history .horizontal-section__textbox {
   margin-left: 48px;
 }
 @media screen and (max-width: 767px) {
-  .section-history .horizontal-section__description,
-  .section-history .horizontal-section__cta {
+  .section-history .horizontal-section__textbox {
     margin-left: 0;
   }
+}
+.section-history .horizontal-section__description {
+  color: rgba(238, 236, 232, 0.63);
 }
 .section-history__images {
   padding-left: 72px;
@@ -1522,14 +1519,12 @@ button:focus {
 .section-explore .horizontal-section__eyebrow {
   color: #ff6320;
 }
-.section-explore .horizontal-section__description,
-.section-explore .horizontal-section__cta {
+.section-explore .horizontal-section__textbox {
   max-width: 480px;
   margin-left: 48px;
 }
 @media screen and (max-width: 767px) {
-  .section-explore .horizontal-section__description,
-  .section-explore .horizontal-section__cta {
+  .section-explore .horizontal-section__textbox {
     margin-left: 0;
   }
 }

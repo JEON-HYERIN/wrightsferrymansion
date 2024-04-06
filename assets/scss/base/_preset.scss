@@ -81,8 +81,8 @@ button {
       align-items: stretch;
     }
   }
-  &__content {
-    position: relative;
+  &__content,
+  &__textbox {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,6 +90,9 @@ button {
     @include mobile {
       row-gap: 20px;
     }
+  }
+  &__content {
+    position: relative;
   }
   &__eyebrow {
     font-size: 12px;
@@ -128,7 +131,6 @@ button {
   &__description {
     display: flex;
     flex-direction: column;
-    gap: 12px;
     max-width: 420px;
     font-size: 16px;
     line-height: 1.4;

@@ -34,22 +34,22 @@ mm.add("(min-width: 992px)", () => {
   })
   
   // 자식 모션
-  gsap.from('.section-home__thumbnail img', {
-    scale: 1.7,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.section-home__thumbnail',
-      containerAnimation: horiMotion,
-      start: 'left right',
-      end: 'right left',
-      scrub: 0,
-      // markers: true,
-    }
-  });
+  // gsap.from('.section-home__thumbnail img', {
+  //   scale: 1.7,
+  //   ease: 'none',
+  //   scrollTrigger: {
+  //     trigger: '.section-home__thumbnail',
+  //     containerAnimation: horiMotion,
+  //     start: 'left right',
+  //     end: 'right left',
+  //     scrub: 0,
+  //     // markers: true,
+  //   }
+  // });
   
   $('[data-motion]').each(function(index, el) {
     const value = ($(this).data('motion-value')) ? $(this).data('motion-value') : 0;
-  
+
     if($(this).data('motion') === 'x') {
       gsap.to($(this).find('img'), {
         xPercent: value,
@@ -69,17 +69,32 @@ mm.add("(min-width: 992px)", () => {
       gsap.from($(this).find('> *'), {
         opacity: 0,
         ease: 'none',
-        stagger: 0.1,
+        stagger: 0.15,
         scrollTrigger: {
           trigger: el,
           containerAnimation: horiMotion,
           start: 'left right',
           end: 'right left',
           toggleActions: 'play none none reverse',
+          markers: true,
           // onEnter 도달
           // onLeave 떠남
           // onEnterBack 떠났다가 돌아옴
           // onLeaveBack 도달했다가 다시 나감
+        }
+      });
+    }
+
+    if($(this).data('motion') === 'scale') {
+      gsap.from($(this).find('img'), {
+        scale: value,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: el,
+          containerAnimation: horiMotion,
+          start: 'left right',
+          end: 'right left',
+          scrub: 0,
           // markers: true,
         }
       });

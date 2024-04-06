@@ -25,6 +25,9 @@
       justify-content: center;
     }
   }
+  .horizontal-section__eyebrow {
+    letter-spacing: 1px;
+  }
   .horizontal-section__content {
     position: relative;
     z-index: 1;
@@ -34,7 +37,7 @@
     color: $color-white;
     @include tablet {
       align-items: center;
-      gap: 16px;
+      row-gap: 16px;
       padding: 90px $gutter-tablet;
     }
     @include mobile {
@@ -52,6 +55,7 @@
     text-align: left;
     color: inherit;
     @include tablet {
+      font-size: clamp(32px, 7vw, 60px);
       text-align: center;
     }
   }
@@ -77,6 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 48px;
     padding: 0 $gutter-desktop;
     @include tablet {
       row-gap: $gutter-tablet;
@@ -87,6 +92,14 @@
     }
     @include mobile-small {
       padding: $gutter-mobile-small $gutter-mobile-small 0;
+    }
+  }
+  &__row {
+    flex: 1;
+    &--top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
   @at-root.footer-contact {
@@ -127,7 +140,7 @@
       }
     }
     &__description {
-      font-family: Romie, sans-serif;
+      @include font-romie;
       font-size: clamp(24px, 6vmin, 48px);
       line-height: 1;
       letter-spacing: -1px;

@@ -1,13 +1,7 @@
-// @mixin horizontal-section-gutter {
-//   padding: $gutter-desktop;
-//   @include tablet {
-//     padding: $gutter-tablet;
-//   }
-//   @include mobile {
-//     padding: $gutter-mobile;
-//   }
-// }
-
+@mixin font-romie {
+  font-family: Romie, sans-serif;
+  font-weight: 400;
+}
 @mixin arrow($selector) {
   font-size: 0;
   line-height: 0;

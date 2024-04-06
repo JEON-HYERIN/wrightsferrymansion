@@ -18,7 +18,7 @@ let sections = gsap.utils.toArray('section');
 
 let mm = gsap.matchMedia();
 mm.add("(min-width: 992px)", () => {
-  const horiMotion = gsap.to('.sticky__inner', {
+  const horizontalMotion = gsap.to('.sticky__inner', {
     ease: 'none',
     xPercent: -100,
     x: function() {
@@ -39,7 +39,7 @@ mm.add("(min-width: 992px)", () => {
   //   ease: 'none',
   //   scrollTrigger: {
   //     trigger: '.section-home__thumbnail',
-  //     containerAnimation: horiMotion,
+  //     containerAnimation: horizontalMotion,
   //     start: 'left right',
   //     end: 'right left',
   //     scrub: 0,
@@ -51,32 +51,51 @@ mm.add("(min-width: 992px)", () => {
     const value = ($(this).data('motion-value')) ? $(this).data('motion-value') : 0;
 
     if($(this).data('motion') === 'x') {
-      gsap.to($(this).find('img'), {
-        xPercent: value,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: el,
-          containerAnimation: horiMotion,
-          start: 'left right',
-          end: 'right left',
-          scrub: 0,
-          // markers: true,
+      if($(this).data('motion-direction') === 'fromTo') {
+        gsap.fromTo($(this).find('img'), {
+         xPercent: value
+        },
+        {
+          scrollTrigger: {
+           trigger: el,
+           containerAnimation: horizontalMotion,
+           start: 'center right',
+           end: 'right left',
+           scrub: 0,
+          //  markers: true,
+         },
+         xPercent: -value,
+        });
+      } else {
+        if($(this).data('motion') === 'x') {
+          gsap.to($(this).find('img'), {
+            xPercent: value,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: el,
+              containerAnimation: horizontalMotion,
+              start: 'center center',
+              end: 'right left',
+              scrub: 0,
+              // markers: true,
+            }
+          });
         }
-      });
+      }
     }
   
     if($(this).data('motion') === 'text') {
       gsap.from($(this).find('> *'), {
         opacity: 0,
         ease: 'none',
-        stagger: 0.15,
+        stagger: 0.12,
         scrollTrigger: {
           trigger: el,
-          containerAnimation: horiMotion,
+          containerAnimation: horizontalMotion,
           start: 'left right',
           end: 'right left',
           toggleActions: 'play none none reverse',
-          markers: true,
+          // markers: true,
           // onEnter 도달
           // onLeave 떠남
           // onEnterBack 떠났다가 돌아옴
@@ -91,7 +110,7 @@ mm.add("(min-width: 992px)", () => {
         ease: 'none',
         scrollTrigger: {
           trigger: el,
-          containerAnimation: horiMotion,
+          containerAnimation: horizontalMotion,
           start: 'left right',
           end: 'right left',
           scrub: 0,

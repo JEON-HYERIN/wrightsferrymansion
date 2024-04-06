@@ -181,8 +181,8 @@ button:focus {
   flex-direction: column;
   align-items: center;
   font-family: Romie, sans-serif;
-  font-size: clamp(36px, 5.5vw, 75px);
   font-weight: 400;
+  font-size: clamp(36px, 5.5vw, 75px);
   line-height: 0.9;
   text-align: center;
   text-transform: uppercase;
@@ -585,6 +585,9 @@ button:focus {
     justify-content: center;
   }
 }
+.section-footer .horizontal-section__eyebrow {
+  letter-spacing: 1px;
+}
 .section-footer .horizontal-section__content {
   position: relative;
   z-index: 1;
@@ -596,7 +599,7 @@ button:focus {
 @media screen and (max-width: 991px) {
   .section-footer .horizontal-section__content {
     align-items: center;
-    gap: 16px;
+    row-gap: 16px;
     padding: 90px 48px;
   }
 }
@@ -620,6 +623,7 @@ button:focus {
 }
 @media screen and (max-width: 991px) {
   .section-footer .horizontal-section__headline {
+    font-size: clamp(32px, 7vw, 60px);
     text-align: center;
   }
 }
@@ -646,6 +650,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  row-gap: 48px;
   padding: 0 72px;
 }
 @media screen and (max-width: 991px) {
@@ -663,6 +668,14 @@ button:focus {
   .section-footer__information {
     padding: 16px 16px 0;
   }
+}
+.section-footer__row {
+  flex: 1;
+}
+.section-footer__row--top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .footer-contact__item {
   display: flex;
@@ -708,6 +721,7 @@ button:focus {
 }
 .footer-contact__description {
   font-family: Romie, sans-serif;
+  font-weight: 400;
   font-size: clamp(24px, 6vmin, 48px);
   line-height: 1;
   letter-spacing: -1px;
@@ -1147,8 +1161,15 @@ button:focus {
   top: 0;
   right: 0;
   max-width: 540px;
-  transform: translate(-50%, -36%);
+  transform: translate(50%, -36%);
   pointer-events: none;
+}
+@media screen and (max-width: 991px) {
+  .section-visual__object {
+    right: auto;
+    left: 50%;
+    transform: translate(-54%, -36%);
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1169,13 +1190,23 @@ button:focus {
 .section-about .horizontal-section__eyebrow {
   color: #52870b;
 }
+.section-about .horizontal-section__description,
+.section-about .horizontal-section__cta {
+  margin-left: 16px;
+}
+@media screen and (max-width: 767px) {
+  .section-about .horizontal-section__description,
+  .section-about .horizontal-section__cta {
+    margin-left: 0;
+  }
+}
 .section-about__images {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0 72px;
+  padding: 0 140px;
 }
 @media screen and (max-width: 991px) {
   .section-about__images {
@@ -1196,6 +1227,12 @@ button:focus {
   position: relative;
   z-index: 1;
   max-width: 520px;
+  margin-top: -48px;
+}
+@media screen and (max-width: 991px) {
+  .section-about__image--front {
+    margin-top: 0;
+  }
 }
 .section-about__image--back {
   position: absolute;

@@ -149,8 +149,7 @@
       flex-direction: row-reverse;
       justify-content: flex-end;
       align-items: center;
-      font-family: Romie, sans-serif;
-      font-weight: 400;
+      @include font-romie;
     }
   }
   &__title {

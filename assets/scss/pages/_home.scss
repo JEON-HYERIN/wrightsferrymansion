@@ -73,8 +73,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    font-family: Romie, sans-serif;
-    font-weight: 400;
+    @include font-romie;
     font-size: clamp(32px, 9.75vmin, 100px);
     line-height: 1;
     text-transform: uppercase;
@@ -231,8 +230,13 @@
     top: 0;
     right: 0;
     max-width: 540px;
-    transform: translate(-50%, -36%);
+    transform: translate(50%, -36%);
     pointer-events: none;
+    @include tablet {
+      right: auto;
+      left: 50%;
+      transform: translate(-54%, -36%);
+    }
   }
 }
 .section-about {
@@ -250,13 +254,20 @@
   .horizontal-section__eyebrow {
     color: $color-green;
   }
+  .horizontal-section__description,
+  .horizontal-section__cta {
+    margin-left: 16px;
+    @include mobile {
+      margin-left: 0;
+    }
+  }
   &__images {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 0 $gutter-desktop;
+    padding: 0 140px;
     @include tablet {
       padding: $gutter-tablet;
     }
@@ -272,6 +283,10 @@
       position: relative;
       z-index: 1;
       max-width: 520px;
+      margin-top: -48px;
+      @include tablet {
+        margin-top: 0;
+      }
     }
     &--back {
       position: absolute;
@@ -357,8 +372,7 @@
       justify-content: flex-end;
       align-items: center;
       min-width: 67vmin;
-      font-family: Romie, sans-serif;
-      font-weight: 400;
+      @include font-romie;
     }
   }
   &__index {

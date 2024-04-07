@@ -89,7 +89,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: $z-index--nav;
     min-width: calc(50vw + #{$gutter-desktop});
     height: 100dvh;
     background-color: $color-olive;

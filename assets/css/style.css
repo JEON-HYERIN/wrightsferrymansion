@@ -33,7 +33,7 @@ button:focus { outline: none; }
 
 img { display: block; }
 
-#skip-nav { position: relative; z-index: 10000; }
+#skip-nav { position: relative; z-index: 100; }
 
 #skip-nav a { position: absolute; top: -30px; left: 0; width: 100%; padding: 2px 6px 0 0; text-align: center; font-size: 13px; line-height: 26px; color: #fff; white-space: nowrap; background-color: #333; }
 
@@ -133,7 +133,7 @@ img { display: block; }
 
 .nav-menu__line { display: block; width: 20px; height: 1px; background-color: #fff; }
 
-.global-nav__inner { position: fixed; top: 0; right: 0; z-index: 2; min-width: calc(50vw + 72px); height: 100dvh; background-color: #6a7870; -webkit-transform: translateX(100%); transform: translateX(100%); pointer-events: none; }
+.global-nav__inner { position: fixed; top: 0; right: 0; z-index: 9; min-width: calc(50vw + 72px); height: 100dvh; background-color: #6a7870; -webkit-transform: translateX(100%); transform: translateX(100%); pointer-events: none; }
 
 @media screen and (max-width: 991px) { .global-nav__inner { width: 100%; } }
 

@@ -28,8 +28,9 @@ mm.add("(min-width: 992px)", () => {
       trigger: '.horizontal-page',
       start: '0% 0%',
       end: '100% 100%',
-      scrub: 0,
-      invalidateOnRefresh: true
+      scrub: 1,
+      invalidateOnRefresh: true,
+      // markers: true,
     }
   })
   
@@ -59,12 +60,13 @@ mm.add("(min-width: 992px)", () => {
           scrollTrigger: {
            trigger: el,
            containerAnimation: horizontalMotion,
-           start: 'center right',
+           start: 'left right',
            end: 'right left',
-           scrub: 0,
+           scrub: true,
           //  markers: true,
          },
          xPercent: -value,
+         ease: 'none'
         });
       } else {
         if($(this).data('motion') === 'x') {
@@ -74,9 +76,9 @@ mm.add("(min-width: 992px)", () => {
             scrollTrigger: {
               trigger: el,
               containerAnimation: horizontalMotion,
-              start: 'center center',
+              start: 'left right',
               end: 'right left',
-              scrub: 0,
+              scrub: true,
               // markers: true,
             }
           });
@@ -87,8 +89,9 @@ mm.add("(min-width: 992px)", () => {
     if($(this).data('motion') === 'text') {
       gsap.from($(this).find('> *'), {
         opacity: 0,
-        ease: 'none',
-        stagger: 0.12,
+        stagger: 0.21,
+        ease: "power1.inOut",
+        duration: 1,
         scrollTrigger: {
           trigger: el,
           containerAnimation: horizontalMotion,
@@ -113,7 +116,7 @@ mm.add("(min-width: 992px)", () => {
           containerAnimation: horizontalMotion,
           start: 'left right',
           end: 'right left',
-          scrub: 0,
+          scrub: true,
           // markers: true,
         }
       });

@@ -19,6 +19,9 @@ button {
     outline: none;
   }
 }
+img {
+  display: block;
+}
 #skip-nav {
   position: relative;
   z-index: $z-index--skip-nav;

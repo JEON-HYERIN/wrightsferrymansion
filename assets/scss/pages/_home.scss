@@ -208,9 +208,10 @@
     }
   }
   &__secondary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
     img {
       width: 13vw;
       max-width: 205px;
@@ -228,13 +229,12 @@
   &__object {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
+    z-index: 1;
     max-width: 540px;
-    transform: translate(50%, -36%);
+    transform: translate(-24%, -36%);
     pointer-events: none;
     @include tablet {
-      right: auto;
-      left: 50%;
       transform: translate(-54%, -36%);
     }
   }
@@ -306,8 +306,8 @@
   &__object {
     position: absolute;
     bottom: 0;
-    right: 0;
-    transform: translateX(50%);
+    left: 30%;
+    z-index: 1;
     pointer-events: none;
     @include tablet {
       display: none;
@@ -553,8 +553,7 @@
       order: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
+      align-items: center;
       row-gap: $gutter-desktop;
       padding-top: 20px;
       .section-explore__decoration {

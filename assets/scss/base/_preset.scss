@@ -114,13 +114,6 @@ img {
     text-align: center;
     text-transform: uppercase;
     color: $color-black;
-    &--feature {
-      font-feature-settings: 'liga', 'dlig', 'hlig', 'calt';
-    }
-    .lower-case {
-      text-transform: lowercase;
-      font-style: italic;
-    }
     @include tablet {
       font-size: clamp(36px, 10vw, 75px);
     }
@@ -130,11 +123,20 @@ img {
     @include mobile-small {
       font-size: clamp(32px, 11vw, 75px);
     }
+    &--feature {
+      font-feature-settings: 'liga', 'dlig', 'hlig', 'calt';
+    }
+    .lower-case {
+      text-transform: lowercase;
+      font-style: italic;
+    }
+  }
+  &__textbox {
+    max-width: 420px;
   }
   &__description {
     display: flex;
     flex-direction: column;
-    max-width: 420px;
     font-size: 16px;
     line-height: 1.4;
     color: $color-black--rgba;

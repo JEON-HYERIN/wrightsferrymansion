@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: Inter,sans-serif;
   font-size: 14px;
@@ -11,7 +10,6 @@ body {
   background-color: $color-white;
   -webkit-font-smoothing: antialiased;
 }
-
 button {
   padding: 0;
   cursor: pointer;
@@ -44,11 +42,9 @@ img {
     }
   }
 }
-
 #wrap {
   min-width: 320px;
 }
-
 .blind {
   position: absolute;
   width: 1px;

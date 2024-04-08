@@ -13,8 +13,42 @@ gsap.ticker.add((time)=>{
 
 gsap.ticker.lagSmoothing(0)
 
-let sections = gsap.utils.toArray('section');
+// 새로고침 시 사용자 스크롤 위치 저장하지 않음
+if (history.scrollRestoration) {
+  history.scrollRestoration = "manual";
+}
 
+// a태그 기본동작 방지
+$(document).on('click', 'a[href="#"]', function (e) {
+  e.preventDefault();
+});
+
+// loading
+const introMotion = gsap.timeline({
+  onStart: function() {
+    $('body').css('overflow', 'hidden');
+    lenis.stop();
+  },
+  onComplete: function() {
+    $('body').removeAttr('style');
+    lenis.start();
+    homeMotion.play();
+  }
+});
+introMotion
+.to('.loading', {opacity: 0, display: 'none'}, 'a+=1')
+
+const homeMotion = gsap.timeline({
+  paused: true,
+  defaults: {
+    duration: 1,
+    ease: 'power1.inOut'
+  }
+});
+homeMotion
+.from('.section-home__headline', {opacity: 0}, 'a')
+.from('.section-home__description', {opacity: 0}, 'a+=0.1')
+.from('.horizontal-section__cta', {opacity: 0}, 'a+=0.2')
 
 let mm = gsap.matchMedia();
 mm.add("(min-width: 992px)", () => {
@@ -89,7 +123,7 @@ mm.add("(min-width: 992px)", () => {
     if($(this).data('motion') === 'text') {
       gsap.from($(this).find('> *'), {
         opacity: 0,
-        stagger: 0.21,
+        stagger: 0.2,
         ease: "power1.inOut",
         duration: 1,
         scrollTrigger: {
@@ -124,11 +158,6 @@ mm.add("(min-width: 992px)", () => {
   });
 })
 
-// a태그 기본동작 방지
-$(document).on('click', 'a[href="#"]', function (e) {
-  e.preventDefault();
-});
-
 // 반응형 대응을 위해 초기세팅
 gsap.set('.global-nav__inner', {x: 0, xPercent: 100}); 
 const navTl = gsap.timeline({
@@ -151,7 +180,6 @@ navTl
 .to('.header', {'mix-blend-mode': 'normal'}, 'a')
 
 $('.nav-menu').on('click', toggleNav);
-
 function toggleNav() {
   const menuBtn = $('.nav-menu');
   const bodyEl = $('body');

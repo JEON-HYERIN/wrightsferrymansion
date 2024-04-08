@@ -68,7 +68,7 @@ navTl
 .to('.nav-menu__line:nth-child(1)', {y: 6, rotate: 45}, 'a')
 .to('.nav-menu__line:nth-child(3)', {y: -6, rotate: -45}, 'a')
 .to('.nav-menu__line:nth-child(2)', {opacity: 0}, 'a')
-.to('.global-nav__dim', {opacity: 1}, 'a')
+.to('.global-nav__dim', {opacity: 1, 'pointer-events': 'auto'}, 'a')
 .to('.header', {'mix-blend-mode': 'normal'}, 'a')
 
 $('.nav-menu').on('click', toggleNav);

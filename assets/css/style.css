@@ -1520,26 +1520,28 @@ img {
     display: flex;
     flex-direction: row-reverse;
   }
-  .section-history__image--back::after, .section-history__image--back img {
-    width: 50%;
-    height: 100%;
-  }
 }
 @media screen and (max-width: 767px) {
   .section-history__image--back {
     display: none;
   }
 }
+.section-history__image--back::after, .section-history__image--back img {
+  width: 100%;
+  height: 50%;
+}
+@media screen and (max-width: 991px) {
+  .section-history__image--back::after, .section-history__image--back img {
+    width: 50%;
+    height: 100%;
+  }
+}
 .section-history__image--back::after {
   content: "";
   display: block;
-  width: 100%;
-  height: 50%;
   background-color: #6a1606;
 }
 .section-history__image--back img {
-  width: 100%;
-  height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }

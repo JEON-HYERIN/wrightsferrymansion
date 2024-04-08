@@ -67,7 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    row-gap: 5px;
     width: 43px;
     height: 43px;
     border-radius: 50%;
@@ -129,11 +129,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    row-gap: 12px;
   }
   &__link {
     display: flex;
-    gap: 36px;
+    column-gap: 36px;
     color: $color-white;
     transition: color .3s;
     &:hover {
@@ -179,18 +179,18 @@
 }
 .nav-information {
   display: flex;
-  gap: $gutter-desktop;
+  column-gap: $gutter-desktop;
   color: $color-white;
   @include tablet {
-    gap: $gutter-tablet;
+    column-gap: $gutter-tablet;
   }
   @include mobile {
-    gap: $gutter-mobile;
+    column-gap: $gutter-mobile;
     padding-bottom: $gutter-mobile;
     
   }
   @include mobile-small {
-    gap: $gutter-mobile-small;
+    column-gap: $gutter-mobile-small;
     padding-bottom: $gutter-mobile-small;
   }
   &__column {

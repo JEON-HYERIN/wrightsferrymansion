@@ -154,13 +154,13 @@
   }
   &__row {
     &--bottom {
-      gap: 24px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       @include mobile {
         flex-direction: column;
         align-items: flex-start;
+        row-gap: 24px;
       }
     }
   }
@@ -183,7 +183,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    gap: 24px;
+    row-gap: 24px;
     color: $color-black--rgba;
     a {
       color: #757575;
@@ -191,7 +191,7 @@
     }
     @include mobile {
       align-items: flex-start;
-      gap: 8px;
+      row-gap: 8px;
     }
   }
   &__logo {

@@ -15,7 +15,7 @@ body {
 button {
   padding: 0;
   cursor: pointer;
-  &:focus {
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 }

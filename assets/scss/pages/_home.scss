@@ -48,10 +48,6 @@
 }
 .horizontal-page {
   position: relative;
-  height: 1000vh;
-  @include tablet {
-    height: auto;
-  }
 }
 .sticky {
   position: sticky;

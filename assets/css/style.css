@@ -931,12 +931,6 @@ img {
 
 .horizontal-page {
   position: relative;
-  height: 1000vh;
-}
-@media screen and (max-width: 991px) {
-  .horizontal-page {
-    height: auto;
-  }
 }
 
 .sticky {

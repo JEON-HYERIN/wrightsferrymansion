@@ -35,12 +35,18 @@ const introMotion = gsap.timeline({
     homeMotion.play();
   }
 });
-introMotion
-.to('.loading', {opacity: 0, display: 'none'}, 'a+=1')
+introMotion.to('.loading', {
+    opacity: 0,
+    duration: 1,
+    onComplete: function() {
+    gsap.set('.loading', {display: 'none'})
+  }
+}, 'a+=1')
 
 const homeMotion = gsap.timeline({
   paused: true,
   defaults: {
+    delay: 0.2,
     duration: 1,
     ease: 'power1.inOut'
   }
@@ -85,6 +91,21 @@ function toggleNav() {
     lenis.start();
     navTl.reverse();
     menuBtn.attr('aria-label', 'menu open');
+  }
+}
+
+setContentHeight();
+window.addEventListener('resize', setContentHeight);
+function setContentHeight() {
+  const content = document.querySelector('.sticky__inner');
+  const contentWidth = content.getBoundingClientRect().width;
+  const contentWrapper = document.querySelector('.horizontal-page');
+  const windowWidth = window.innerWidth;
+
+  if(windowWidth > 991) {
+    contentWrapper.style.height = contentWidth + 'px';
+  } else {
+    contentWrapper.removeAttribute('style');
   }
 }
 

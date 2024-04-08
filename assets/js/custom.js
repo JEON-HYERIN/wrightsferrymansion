@@ -50,116 +50,8 @@ homeMotion
 .from('.section-home__description', {opacity: 0}, 'a+=0.1')
 .from('.horizontal-section__cta', {opacity: 0}, 'a+=0.2')
 
-let mm = gsap.matchMedia();
-mm.add("(min-width: 992px)", () => {
-  const horizontalMotion = gsap.to('.sticky__inner', {
-    ease: 'none',
-    xPercent: -100,
-    x: function() {
-      return window.innerWidth;
-    },
-    scrollTrigger: {
-      trigger: '.horizontal-page',
-      start: '0% 0%',
-      end: '100% 100%',
-      scrub: 1,
-      invalidateOnRefresh: true,
-      // markers: true,
-    }
-  })
-  
-  // 자식 모션
-  // gsap.from('.section-home__thumbnail img', {
-  //   scale: 1.7,
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: '.section-home__thumbnail',
-  //     containerAnimation: horizontalMotion,
-  //     start: 'left right',
-  //     end: 'right left',
-  //     scrub: 0,
-  //     // markers: true,
-  //   }
-  // });
-  
-  $('[data-motion]').each(function(index, el) {
-    const value = ($(this).data('motion-value')) ? $(this).data('motion-value') : 0;
-
-    if($(this).data('motion') === 'x') {
-      if($(this).data('motion-direction') === 'fromTo') {
-        gsap.fromTo($(this).find('img'), {
-         xPercent: value
-        },
-        {
-          scrollTrigger: {
-           trigger: el,
-           containerAnimation: horizontalMotion,
-           start: 'left right',
-           end: 'right left',
-           scrub: true,
-          //  markers: true,
-         },
-         xPercent: -value,
-         ease: 'none'
-        });
-      } else {
-        if($(this).data('motion') === 'x') {
-          gsap.to($(this).find('img'), {
-            xPercent: value,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: el,
-              containerAnimation: horizontalMotion,
-              start: 'left right',
-              end: 'right left',
-              scrub: true,
-              // markers: true,
-            }
-          });
-        }
-      }
-    }
-  
-    if($(this).data('motion') === 'text') {
-      gsap.from($(this).find('> *'), {
-        opacity: 0,
-        stagger: 0.2,
-        ease: "power1.inOut",
-        duration: 1,
-        scrollTrigger: {
-          trigger: el,
-          containerAnimation: horizontalMotion,
-          start: 'left right',
-          end: 'right left',
-          toggleActions: 'play none none reverse',
-          // markers: true,
-          // onEnter 도달
-          // onLeave 떠남
-          // onEnterBack 떠났다가 돌아옴
-          // onLeaveBack 도달했다가 다시 나감
-        }
-      });
-    }
-
-    if($(this).data('motion') === 'scale') {
-      gsap.from($(this).find('img'), {
-        scale: value,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: el,
-          containerAnimation: horizontalMotion,
-          start: 'left right',
-          end: 'right left',
-          scrub: true,
-          // markers: true,
-        }
-      });
-    }
-  });
-})
-
-// 반응형 대응을 위해 초기세팅
-gsap.set('.global-nav__inner', {x: 0, xPercent: 100}); 
+// nav
+gsap.set('.global-nav__inner', {x: 0, xPercent: 100}); // 반응형 대응을 위해 초기세팅
 const navTl = gsap.timeline({
   paused: true,
   defaults : {
@@ -195,3 +87,112 @@ function toggleNav() {
     menuBtn.attr('aria-label', 'menu open');
   }
 }
+
+// horizontal
+let mm = gsap.matchMedia();
+mm.add("(min-width: 992px)", () => {
+  const horizontalMotion = gsap.to('.sticky__inner', {
+    ease: 'none',
+    xPercent: -100,
+    x: function() {
+      return window.innerWidth;
+    },
+    scrollTrigger: {
+      trigger: '.horizontal-page',
+      start: '0% 0%',
+      end: '100% 100%',
+      scrub: 1,
+      invalidateOnRefresh: true,
+      // markers: true,
+    }
+  })
+  
+  // 자식 모션
+  // gsap.from('.section-home__thumbnail img', {
+  //   scale: 1.7,
+  //   ease: 'none',
+  //   scrollTrigger: {
+  //     trigger: '.section-home__thumbnail',
+  //     containerAnimation: horizontalMotion,
+  //     start: 'left right',
+  //     end: 'right left',
+  //     scrub: 0,
+  //     // markers: true,
+  //   }
+  // });
+
+  $('[data-motion]').each(function(index, el) {
+    const value = ($(this).data('motion-value')) ? $(this).data('motion-value') : 0;
+
+    if($(this).data('motion') === 'x') {
+      if($(this).data('motion-direction') === 'fromTo') {
+        gsap.fromTo($(this).find('img'), {
+         xPercent: value
+        },
+        {
+          scrollTrigger: {
+           trigger: el,
+           containerAnimation: horizontalMotion,
+           start: 'left right',
+           end: 'right left',
+           scrub: true,
+          //  markers: true,
+         },
+         xPercent: -value,
+         ease: 'none'
+        });
+      } else {
+        gsap.to($(this).find('img'), {
+          xPercent: value,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: el,
+            containerAnimation: horizontalMotion,
+            start: 'left right',
+            end: 'right left',
+            scrub: true,
+            // markers: true,
+          }
+        });
+      }
+    }
+  
+    if($(this).data('motion') === 'text') {
+      const staggerValue = ($(this).data('motion-stagger') ? $(this).data('motion-stagger') : 0.2);
+
+      gsap.from($(this).find('> *'), {
+        opacity: 0,
+        stagger: staggerValue,
+        ease: 'power1.inOut',
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+          containerAnimation: horizontalMotion,
+          start: 'left right',
+          end: 'right left',
+          toggleActions: 'play none none reverse',
+          // markers: true,
+          // onEnter 도달
+          // onLeave 떠남
+          // onEnterBack 떠났다가 돌아옴
+          // onLeaveBack 도달했다가 다시 나감
+        }
+      });
+    }
+
+    if($(this).data('motion') === 'scale') {
+      gsap.from($(this).find('img'), {
+        scale: value,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: el,
+          containerAnimation: horizontalMotion,
+          start: 'left right',
+          end: 'right left',
+          scrub: true,
+          // markers: true,
+        }
+      });
+    }
+  });
+})

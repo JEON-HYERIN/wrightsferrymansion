@@ -130,21 +130,6 @@ img {
   clip: rect(0 0 0 0);
 }
 
-.horizontal-page {
-  display: flex;
-  height: 100dvh;
-  overscroll-behavior: none;
-}
-@media screen and (max-width: 991px) {
-  .horizontal-page {
-    flex-direction: column;
-    height: auto;
-  }
-}
-.header.is-open + .horizontal-page {
-  pointer-events: none;
-}
-
 .horizontal-section {
   position: relative;
   background-color: rgba(238, 236, 232, 0.63);

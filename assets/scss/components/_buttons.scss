@@ -7,17 +7,20 @@ $compontent-name: 'common-cta';
   width: 100%;
   max-width: 420px;
   gap: 16px;
+
   &__title {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .5px;
     text-transform: uppercase;
     color: $color-black;
-    transition: letter-spacing .2s cubic-bezier(.165,.84,.44,1);
+    transition: letter-spacing .2s cubic-bezier(.165, .84, .44, 1);
+
     .#{$compontent-name}:hover & {
       letter-spacing: 1px;
     }
   }
+
   &__icon {
     position: relative;
     display: flex;
@@ -29,10 +32,12 @@ $compontent-name: 'common-cta';
     border: 1px solid $color-black;
     transition-property: transform;
     transition-duration: .2s;
-    transition-timing-function: cubic-bezier(.165,.84,.44,1);
+    transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+
     .#{$compontent-name}:hover & {
       transform: translateX(5px);
     }
+
     &::before {
       content: '';
       position: absolute;
@@ -44,11 +49,13 @@ $compontent-name: 'common-cta';
       background-color: $color-black;
       border-radius: inherit;
       transition: inherit;
+
       .#{$compontent-name}:hover & {
         transform: scale(1.1);
       }
     }
   }
+
   &__arrow {
     position: relative;
     color: $color-black;
@@ -56,57 +63,73 @@ $compontent-name: 'common-cta';
     transition-property: color;
     transition-timing-function: inherit;
     transition-duration: inherit;
+
     .#{$compontent-name}:hover & {
       color: $color-white;
     }
   }
+
   &--yellow-green {
     .#{$compontent-name}__title {
       color: $color-white;
     }
+
     .#{$compontent-name}__icon {
       border-color: $color-yellow-green;
+
       &::before {
         background-color: $color-yellow-green;
       }
     }
+
     .#{$compontent-name}__arrow {
       color: $color-yellow-green;
     }
+
     &:hover .#{$compontent-name}__arrow {
       color: $color-black;
     }
   }
+
   &--silver {
     .#{$compontent-name}__title {
       color: $color-silver;
     }
+
     .#{$compontent-name}__icon {
       border-color: $color-silver;
+
       &::before {
         background-color: $color-silver;
       }
     }
+
     .#{$compontent-name}__arrow {
       color: $color-silver;
     }
+
     &:hover .#{$compontent-name}__arrow {
       color: $color-black;
     }
   }
+
   &--white {
     .#{$compontent-name}__title {
       color: $color-white;
     }
+
     .#{$compontent-name}__icon {
       border-color: $color-white;
+
       &::before {
         background-color: $color-white;
       }
     }
+
     .#{$compontent-name}__arrow {
       color: $color-white;
     }
+
     &:hover .#{$compontent-name}__arrow {
       color: $color-black;
     }

@@ -8,18 +8,23 @@
   padding: 0 $gutter-desktop;
   color: $color-white;
   mix-blend-mode: difference;
+
   @include tablet {
     padding: 0 $gutter-tablet;
   }
+
   @include mobile {
     padding: 0 $gutter-mobile;
   }
+
   @include mobile-small {
     padding: 0 $gutter-mobile-small;
   }
+
   @include mobile {
     height: 74px;
   }
+
   &__nav-bar {
     position: relative;
     display: flex;
@@ -30,38 +35,46 @@
     height: 100%;
     margin: 0 auto;
   }
+
   &__title {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     @include mobile {
       max-width: 80px;
       line-height: 1;
     }
+
     a {
       display: block;
     }
   }
+
   &__logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     @include mobile {
       display: none;
     }
   }
 }
+
 .nav-menu {
   display: flex;
   align-items: center;
   column-gap: 12px;
+
   &__title {
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
   &__lines {
     display: flex;
     flex-direction: column;
@@ -72,11 +85,13 @@
     height: 43px;
     border-radius: 50%;
     border: 1px solid $color-white;
+
     @include mobile {
       width: 42px;
       height: 42px;
     }
   }
+
   &__line {
     display: block;
     width: 20px;
@@ -84,6 +99,7 @@
     background-color: $color-white;
   }
 }
+
 .global-nav {
   &__inner {
     position: fixed;
@@ -95,35 +111,44 @@
     background-color: $color-olive;
     transform: translateX(100%);
     pointer-events: none;
+
     @include tablet {
       width: 100%;
     }
   }
+
   &__panel {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: $gutter-desktop;
+
     @include tablet {
       padding: $gutter-tablet;
     }
+
     @include mobile {
       padding: $gutter-mobile;
     }
+
     @include mobile-small {
       padding: $gutter-mobile-small;
     }
   }
+
   &__content {
     flex: 1;
     display: flex;
+
     @include mobile {
       padding-top: 56px;
     }
+
     @include mobile-small {
       padding-top: 46px;
     }
   }
+
   &__list {
     flex: 1;
     display: flex;
@@ -131,19 +156,23 @@
     justify-content: center;
     row-gap: 12px;
   }
+
   &__link {
     display: flex;
     column-gap: 36px;
     color: $color-white;
     transition: color .3s;
+
     &:hover {
       color: $color-yellow-green;
     }
   }
+
   &__column {
     &--index {
       width: 16px;
     }
+
     &--title {
       display: flex;
       flex-direction: row-reverse;
@@ -152,15 +181,18 @@
       @include font-romie;
     }
   }
+
   &__title {
     font-size: clamp(32px, 5vmin, 55px);
     line-height: 1;
     letter-spacing: -.05vw;
     text-transform: uppercase;
   }
+
   &__arrow {
     @include arrow('.global-nav__link');
   }
+
   &__dim {
     position: fixed;
     top: 0;
@@ -172,37 +204,45 @@
     backdrop-filter: blur(25px);
     opacity: 0;
     pointer-events: none;
+
     @include tablet {
       display: none;
     }
   }
 }
+
 .nav-information {
   display: flex;
   column-gap: $gutter-desktop;
   color: $color-white;
+
   @include tablet {
     column-gap: $gutter-tablet;
   }
+
   @include mobile {
     column-gap: $gutter-mobile;
     padding-bottom: $gutter-mobile;
-    
+
   }
+
   @include mobile-small {
     column-gap: $gutter-mobile-small;
     padding-bottom: $gutter-mobile-small;
   }
+
   &__column {
     @include mobile {
       font-size: 12px;
       line-height: 16px;
     }
+
     @include mobile-small {
       font-size: 10px;
       line-height: 13px;
     }
   }
+
   &__title {
     font-weight: 700;
   }

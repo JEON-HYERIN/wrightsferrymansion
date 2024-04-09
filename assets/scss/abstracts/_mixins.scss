@@ -2,19 +2,24 @@
   font-family: Romie, sans-serif;
   font-weight: 400;
 }
+
 @mixin arrow($selector) {
   font-size: 0;
   line-height: 0;
   transition: font-size .3s;
+
   #{$selector}:hover & {
     font-size: 8vmin;
   }
+
   @include tablet {
     display: none;
   }
 }
+
 @mixin textbox($value) {
   margin-left: $value;
+
   @include mobile {
     margin-left: 0;
   }

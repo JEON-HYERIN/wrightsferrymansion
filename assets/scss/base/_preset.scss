@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -10,16 +11,20 @@ body {
   background-color: $color-white;
   -webkit-font-smoothing: antialiased;
 }
+
 button {
   padding: 0;
   cursor: pointer;
+
   &:focus:not(:focus-visible) {
     outline: none;
   }
 }
+
 img {
   display: block;
 }
+
 #skip-nav {
   position: relative;
   z-index: $z-index--skip-nav;
@@ -42,9 +47,11 @@ img {
     }
   }
 }
+
 #wrap {
   min-width: 320px;
 }
+
 .blind {
   position: absolute;
   width: 1px;
@@ -52,82 +59,4 @@ img {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-}
-.horizontal-section {
-  position: relative;
-  background-color: $color-primary;
-  &__inner {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    @include tablet {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  }
-  &__content,
-  &__textbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 24px;
-    @include mobile {
-      row-gap: 20px;
-    }
-  }
-  &__content {
-    position: relative;
-  }
-  &__eyebrow {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .5px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  &__headline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include font-romie;
-    font-size: clamp(36px, 5.5vw, 75px);
-    line-height: .9;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-black;
-    @include tablet {
-      font-size: clamp(36px, 10vw, 75px);
-    }
-    @include mobile {
-      font-size: clamp(32px, 10vw, 75px);
-    }
-    @include mobile-small {
-      font-size: clamp(32px, 11vw, 75px);
-    }
-    &--feature {
-      font-feature-settings: 'liga', 'dlig', 'hlig', 'calt';
-    }
-    .lower-case {
-      text-transform: lowercase;
-      font-style: italic;
-    }
-  }
-  &__textbox {
-    max-width: 420px;
-  }
-  &__description {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    line-height: 1.4;
-    color: $color-black--rgba;
-  }
-  &__cta {
-    display: flex;
-    width: 100%;
-    &--center {
-      justify-content: center;
-    }
-  }
 }

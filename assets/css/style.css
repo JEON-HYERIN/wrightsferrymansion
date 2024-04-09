@@ -1,3 +1,66 @@
+@font-face {
+  font-family: "Romie";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f0901096610737466e5f_Romie-Regular-Italic.ttf") format("truetype"), url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090b4507b5df57e09d7_Romie-Regular-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Itcgaramondstd ";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16ceb84dc05b94624d2_ITCGaramondStd-BkNarrow.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Romie";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090d6f8cdc4ef704b94_Romie-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Romie";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090271d5bdfb9aff6aa_Romie-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Romie";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090462e1ae4835721b7_Romie-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Itcgaramondstd ";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16cefea92c95fbf9e78_ITCGaramondStd-LtNarrow.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Romie";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f0902a42b97d799bd635_Romie-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Itcgaramondstd Narrow";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16ceb84dc05b94624d2_ITCGaramondStd-BkNarrow.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Itcgaramondstd Narrow";
+  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16cefea92c95fbf9e78_ITCGaramondStd-LtNarrow.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -219,69 +282,6 @@ img {
   justify-content: center;
 }
 
-@font-face {
-  font-family: "Romie";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f0901096610737466e5f_Romie-Regular-Italic.ttf") format("truetype"), url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090b4507b5df57e09d7_Romie-Regular-Italic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Itcgaramondstd ";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16ceb84dc05b94624d2_ITCGaramondStd-BkNarrow.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Romie";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090d6f8cdc4ef704b94_Romie-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Romie";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090271d5bdfb9aff6aa_Romie-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Romie";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f090462e1ae4835721b7_Romie-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Itcgaramondstd ";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16cefea92c95fbf9e78_ITCGaramondStd-LtNarrow.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Romie";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f0902a42b97d799bd635_Romie-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Itcgaramondstd Narrow";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16ceb84dc05b94624d2_ITCGaramondStd-BkNarrow.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Itcgaramondstd Narrow";
-  src: url("https://uploads-ssl.webflow.com/6570e8a05181277af39c19d5/6571f16cefea92c95fbf9e78_ITCGaramondStd-LtNarrow.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 .header {
   position: fixed;
   top: 0;
@@ -1510,12 +1510,14 @@ img {
     display: none;
   }
 }
-.section-history__image--back::after, .section-history__image--back img {
+.section-history__image--back::after,
+.section-history__image--back img {
   width: 100%;
   height: 50%;
 }
 @media screen and (max-width: 991px) {
-  .section-history__image--back::after, .section-history__image--back img {
+  .section-history__image--back::after,
+  .section-history__image--back img {
     width: 50%;
     height: 100%;
   }

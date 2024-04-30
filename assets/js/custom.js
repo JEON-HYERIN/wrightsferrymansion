@@ -129,19 +129,6 @@ mm.add("(min-width: 992px)", () => {
   })
   
   // 자식 모션
-  // gsap.from('.section-home__thumbnail img', {
-  //   scale: 1.7,
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: '.section-home__thumbnail',
-  //     containerAnimation: horizontalMotion,
-  //     start: 'left right',
-  //     end: 'right left',
-  //     scrub: 0,
-  //     // markers: true,
-  //   }
-  // });
-
   $('[data-motion]').each(function(index, el) {
     const value = ($(this).data('motion-value')) ? $(this).data('motion-value') : 0;
 
@@ -191,12 +178,8 @@ mm.add("(min-width: 992px)", () => {
           containerAnimation: horizontalMotion,
           start: 'left right',
           end: 'right left',
-          toggleActions: 'play none none reverse',
+          toggleActions: 'play none none reverse', // onEnter 도달 onLeave 떠남 onEnterBack 떠났다가 돌아옴 onLeaveBack 도달했다가 다시 나감
           // markers: true,
-          // onEnter 도달
-          // onLeave 떠남
-          // onEnterBack 떠났다가 돌아옴
-          // onLeaveBack 도달했다가 다시 나감
         }
       });
     }
